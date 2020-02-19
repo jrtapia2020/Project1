@@ -18,3 +18,8 @@ function LoginButtonHandler() {
         }
     });
 }
+
+function ClearForm() {
+    $("#user").val("");
+    $("#password").val("");
+}
