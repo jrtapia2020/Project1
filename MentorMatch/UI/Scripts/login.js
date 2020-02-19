@@ -1,5 +1,5 @@
 function LoginButtonHandler() {
-    var webMethod = "ProjectTemplate/ProjectTemplate/ProjectServices.asmx/ConnectToServer";
+    var webMethod = "../MentorMatch/ProjectServices.asmx/ConnectToServer";
     var parameters = "{}";
 
     //jQuery ajax method
