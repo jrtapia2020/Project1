@@ -93,7 +93,6 @@
     <Content Include="Global.asax" />
     <Content Include="ProjectServices.asmx" />
     <Content Include="UI\HTML\index.html" />
-    <Content Include="UI\HTML\login.html" />
     <Content Include="UI\Images\logo.jpg" />
     <Content Include="UI\Scripts\login.js" />
     <Content Include="UI\Styling\login.css" />
