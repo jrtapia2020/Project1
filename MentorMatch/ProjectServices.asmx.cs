@@ -39,11 +39,11 @@ namespace ProjectTemplate
 		//to be exposed as a web service!
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
-		public string TestConnection()
+		public string ConnectToServer()
 		{
 			try
 			{
-				string testQuery = "select * from users";
+				string Query = "select * from users";
 
 				////////////////////////////////////////////////////////////////////////
 				///here's an example of using the getConString method!
@@ -51,7 +51,7 @@ namespace ProjectTemplate
 				MySqlConnection con = new MySqlConnection(getConString());
 				////////////////////////////////////////////////////////////////////////
 
-				MySqlCommand cmd = new MySqlCommand(testQuery, con);
+				MySqlCommand cmd = new MySqlCommand(Query, con);
 				MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 				DataTable table = new DataTable();
 				adapter.Fill(table);

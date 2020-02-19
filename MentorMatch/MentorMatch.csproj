@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjectTemplate</RootNamespace>
-    <AssemblyName>ProjectTemplate</AssemblyName>
+    <AssemblyName>MentorMatch</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -95,6 +95,7 @@
     <Content Include="UI\HTML\index.html" />
     <Content Include="UI\HTML\login.html" />
     <Content Include="UI\Images\logo.jpg" />
+    <Content Include="UI\Scripts\login.js" />
     <Content Include="UI\Styling\login.css" />
     <Content Include="Web.config" />
   </ItemGroup>

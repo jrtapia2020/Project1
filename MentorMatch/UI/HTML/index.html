@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="">
+<head>
+	<meta charset="utf-8" />
+	<title>Mentor Match Login</title>
+	<!--JQUERY-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!--Scripts-->
+	<script type="text/javascript" src="../Scripts/login.js"></script>
+
+	<!--CSS Link-->
+	<link rel="stylesheet" href="../Styling/login.css">
+</head>
+
+<body>
+	<div class="login">
+		<form action="" method="post">
+			<div class="title">
+				<h1>Mentor Match</h1>
+			</div>
+	
+			<hr>
+	
+			<div class="imgcontainer">
+				<img src="../Images/logo.jpg" alt="Logo" class="logo">
+			</div>
+	
+			<div class="container">
+				<label for="user"><b>Username:</b>
+					<input type="text" placeholder="Enter Username" name="user" required>
+				</label>
+	
+				<label for="password"><b>Password:</b>
+					<input type="password" placeholder="Enter Password" name="password" required>
+				</label>
+	
+				<button type="submit" onclick="javascript: LoginButtonHandler();">Login</button>
+				<label style="font-size: small">
+					<input type="checkbox" checked="checked" name="remember"> Remember Me
+				</label>
+			</div>
+	
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" class="cancel">Cancel</button>
+				<span class="password"><a href="#">Forgot Password?</a></span>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
