@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Services;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 using System.Data;
+using System.Web.Services;
+using MySql.Data.MySqlClient;
 
-namespace ProjectTemplate
+namespace MentorMatch
 {
 	[WebService(Namespace = "http://tempuri.org/")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
