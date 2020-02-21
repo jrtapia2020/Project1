@@ -1,6 +1,10 @@
 function LoginButtonHandler() {
+
+    var username = $("#user").val();
+    var password = $("#password").val();
+
     var webMethod = "../../ProjectServices.asmx/ConnectToServer";
-    var parameters = "{}";
+    var parameters = "{username: " + JSON.stringify(username) + ", password: " +JSON.stringify(password) + "}";
 
     //jQuery ajax method
     $.ajax({
@@ -14,7 +18,7 @@ function LoginButtonHandler() {
             alert(responseFromServer);
         },
         error: function (e) {
-            alert("this code will only execute if javascript is unable to access the webservice");
+            alert("Error: Unable to access the webservice.");
         }
     });
 }

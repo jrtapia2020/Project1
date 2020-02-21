@@ -35,28 +35,45 @@ namespace MentorMatch
 		//to be exposed as a web service!
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
-		public string ConnectToServer()
+		public string ConnectToServer(string username, string password)
 		{
+			MySqlConnection con = new MySqlConnection(getConString());
 			try
 			{
-				string Query = "select * from users";
+				string Query = $"select * from users where username='{username}' and password='{password}'";
 
 				////////////////////////////////////////////////////////////////////////
 				///here's an example of using the getConString method!
 				////////////////////////////////////////////////////////////////////////
-				MySqlConnection con = new MySqlConnection(getConString());
+				//MySqlConnection con = new MySqlConnection(getConString());
 				////////////////////////////////////////////////////////////////////////
+				con.Open();
 
 				MySqlCommand cmd = new MySqlCommand(Query, con);
-				MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+				MySqlDataReader rdr = cmd.ExecuteReader();
+
+				if (rdr.Read())
+				{
+					///// Ignore for now. /////
+					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
+					/////// TODO: Changed later to take to take to homepage //////
+					return "Correct credentials.";
+				}
+
+				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////
+				/*MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
 				DataTable table = new DataTable();
-				adapter.Fill(table);
-				return "Success!";
+				adapter.Fill(table);*/
+				else
+				{
+					return "Incorrect Username or password.";
+				}
 			}
 			catch (Exception e)
 			{
-				return "Something went wrong, please check your credentials and db name and try again.  Error: "+e.Message;
+				return "Error: "+e.Message;
 			}
+			con.Close();
 		}
 	}
 }
