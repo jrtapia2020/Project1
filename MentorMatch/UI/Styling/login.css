@@ -43,7 +43,7 @@ button {
 button:hover {
     background-color: dodgerblue;
     color: white;
-    opacity: 90%;
+    opacity: .9;
 }
 
 /* Cancel button */
