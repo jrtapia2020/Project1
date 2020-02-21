@@ -12,9 +12,9 @@ namespace MentorMatch
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                "DefaultApi",
-                "api/{controller}/{id}",
-                new { id = System.Web.Http.RouteParameter.Optional }
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
             );
         }
     }
