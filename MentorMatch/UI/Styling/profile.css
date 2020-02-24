@@ -1,0 +1,84 @@
+/* Body font and background */
+body{
+    font-family: Calibri, sans-serif;
+    background-color: lightskyblue;
+}
+
+/* Formatting the top bar */
+div.topbar{
+	width: 100%;
+	height: 70px;
+	border: 1px solid #ccc;
+	margin: 15px auto;
+	background-color: white;
+	color: midnightblue;
+}
+
+/* Formatting logo */
+div.logoimg{
+	float: left;
+	margin-right: 10px;
+}
+
+/* Display text next to logo */
+div.pagetop{
+	display: inline-block;
+}
+
+/* Following nav sections are for the home/my profile/sign out bar */
+nav {
+	display: inline-block;
+	float: right;
+	color: white;
+}
+
+nav a{
+	color: midnightblue;
+	text-decoration: none;
+	margin: 0 10px 0 10px;
+}
+
+nav a:hover{
+	color: dodgerblue;
+	text-decoration: underline;
+}
+
+div.profilemeat{
+	width: 100%;
+	margin: 15px auto;
+	background-color: lightskyblue;
+	color: white;
+}
+
+div.profileimg{
+	padding: 10px;
+	float: left;
+}
+
+div.name{
+	display: inline-block;
+	font-size: x-large;
+}
+
+div.geninfo{
+	display: inline-block;
+	margin: 10px;
+	margin-left: 0px;
+	padding: 10px;
+    border: 3px solid #f1f1f1;
+	height: 225px;
+	color: midnightblue;
+	background-color: white;
+	font-size: large;
+}
+
+div.bio{
+	clear: both;
+	margin: 10px;
+	margin-top: 0px;
+	padding: 10px;
+    border: 3px solid #f1f1f1;
+	color: midnightblue;
+	background-color: white;
+	font-size: large;
+}
