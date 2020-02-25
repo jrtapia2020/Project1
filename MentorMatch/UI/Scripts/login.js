@@ -16,6 +16,8 @@ function LoginButtonHandler() {
         success: function (msg) {
             var responseFromServer = msg.d;
             alert(responseFromServer);
+            ClearForm()
+            window.location.replace("homepage.html")
         },
         error: function (e) {
             alert("Error: Unable to access the webservice.");

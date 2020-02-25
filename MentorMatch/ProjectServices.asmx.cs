@@ -71,9 +71,42 @@ namespace MentorMatch
 			}
 			catch (Exception e)
 			{
-				return "Error: "+e.Message;
+				return "Error: " + e.Message;
 			}
-			con.Close();
+			finally
+			{
+				con.Close();
+			}
 		}
-	}
+
+		/////////////////////////////////////////////////////////////////////////
+		[WebMethod(EnableSession = true)]
+		/////////////////////////////////////////////////////////////////////////
+		public string CreateNewAccount(string username, string password, string firstname, string lastname,
+										string major1, string major2, string minor1, string minor2, string grade)
+		{
+
+			MySqlConnection con = new MySqlConnection(getConString());
+			try
+			{
+				string Query = $"INSERT INTO users (username, password, firstname, lastname, major1, major2, minor1, minor2, grade) " +
+							   $"VALUES ('{username}', '{password}', '{firstname}', '{lastname}', '{major1}', '{major2}', '{minor1}', '{minor2}', '{grade}');";
+
+				MySqlCommand cmd = new MySqlCommand(Query, con);
+
+				con.Open();
+				int result = cmd.ExecuteNonQuery();
+
+				return "New Account was created!";
+			}
+			catch (Exception e)
+			{
+				return "Error: " + e.Message;
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
+		}
 }
