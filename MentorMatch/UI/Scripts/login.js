@@ -17,6 +17,7 @@ function LoginButtonHandler() {
             var responseFromServer = msg.d;
             alert(responseFromServer);
             ClearForm()
+            // TODO: Change to be in ProjectServices.cs
             window.location.replace("homepage.html")
         },
         error: function (e) {
