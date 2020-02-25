@@ -2,27 +2,27 @@
 
     var username = $("#user").val();
     var password = $("#password").val();
-    var psw_repeat = $("#psw-repeat").val()
-    var fname = $("#fname").val()
-    var lname = $("#lname").val()
-    var major1 = $("#major1").val()
-    var major2 = $("#major2").val()
-    var minor1 = $("#minor1").val()
-    var minor2 = $("#minor2").val()
-    var grade = $("#grade").val()
+    var psw_repeat = $("#psw-repeat").val();
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var major1 = $("#major1").val();
+    var major2 = $("#major2").val();
+    var minor1 = $("#minor1").val();
+    var minor2 = $("#minor2").val();
+    var grade = $("#grade").val();
 
     if (username == "" || password == "" || psw_repeat == "" || fname == "" || lname == "" || major1 == "") {
-        alert("Error: Missing Required Fields! Please Complete Form.")
+        alert("Error: Missing Required Fields! Please Complete Form.");
     }
     else if (password !== psw_repeat){
-        alert("Error: Passwords do not match! Please try again.")
+        alert("Error: Passwords do not match! Please try again.");
     } 
     else {
     var webMethod = "../../ProjectServices.asmx/CreateNewAccount";
     var parameters = "{username: " + JSON.stringify(username) +
                     ", password: " +JSON.stringify(password) + 
-                    ", fname: " +JSON.stringify(fname) +
-                    ", lname: " +JSON.stringify(lname) +
+                    ", firstname: " +JSON.stringify(fname) +
+                    ", lastname: " +JSON.stringify(lname) +
                     ", major1: " +JSON.stringify(major1) +
                     ", major2: " +JSON.stringify(major2) +
                     ", minor1: " +JSON.stringify(minor1) +
@@ -40,7 +40,7 @@
                 var responseFromServer = msg.d;
                 alert(responseFromServer);
                 ClearForm();
-                window.location.replace("index.html")
+                window.location.replace("index.html");
             },
             error: function (e) {
                 alert("Error: Unable to access the webservice.");
