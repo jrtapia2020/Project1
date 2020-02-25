@@ -16,10 +16,15 @@ div.sign-up {
     padding: 16px;
 }
 
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
 /* Title */
 .title {
     font-family: Verdana, sans-serif;
-    font-size: 150%;
+    font-size: 200%;
     text-align: center;
     color: midnightblue;
 }
@@ -28,7 +33,21 @@ hr {
     border-top: 8px solid midnightblue;
 }
 
-/* Full-width inputs */
+span {color: darkred;}
+
+/* Center the logo image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+}
+
+/* Logo image */
+img.logo {
+    width: 25%;
+    border-radius: 50%;
+}
+
+/* Information Input */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -40,8 +59,14 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-        background-color: #ddd;
-        outline: none;
+    background-color: #ddd;
+    outline: none;
+}
+
+select {
+    margin: 5px;
+    padding: 3px;
+    font-size: medium;
 }
 
 /* Set a style for the submit/register button */
