@@ -16,83 +16,41 @@ form {
     border: 3px solid #f1f1f1;
 }
 
-/* Set a style for all buttons */
-button {
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    font-size: medium;
-}
-
-/* Hover effect for buttons */
-button:hover {
+/* Hover effect for linkss */
+a:hover {
     background-color: dodgerblue;
     color: white;
     opacity: .9;
 }
 
-/* Friends button */
+/* Friends Link*/
 .Friends {
-    width: 28%;
-    float: left;
     background-color: steelblue;
     padding: 12px;
+    cursor: pointer;
+    font-size: x-large;
+    color: white;
 }
 
-/* Profile button */
+/* Profile Link*/
 .Profile {
-    width: 28%;
-    float: none;
     background-color: steelblue;
     padding: 12px;
+    margin-left: 120px;
+    margin-right: 120px;
+    cursor: pointer;
+    font-size: x-large;
+    color: white;
 }
 
-/* Log off button */
+/* Log Off Link*/
 .LogOff {
-    width: 28%;
-    float: right;
     background-color: steelblue;
     padding: 12px;
-}
-
-
-/* .Friends {
-    width: 30%;
-    float: left;
-    background-color: steelblue;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: none;
     cursor: pointer;
-    font-size: medium;
+    font-size: x-large;
     color: white;
 }
-
-.Profile {
-    width: 30%;
-    float: left;
-    background-color: steelblue;
-    padding: 12px;
-    margin-left: 33px;
-    border: none;
-    cursor: pointer;
-    font-size: medium;
-    color: white;
-}
-
-.LogOff {
-    width: 30%;
-    float: right;
-    background-color: steelblue;
-    padding: 12px;
-    margin-left: 33px;
-    border: none;
-    cursor: pointer;
-    font-size: medium;
-    color: white;
-} */
 
 /* Body paragraph*/
 .body{
