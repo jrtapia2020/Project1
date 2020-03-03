@@ -1,43 +1,141 @@
+/* Body font and background */
 body{
+    font-family: Calibri, sans-serif;
     background-color: lightskyblue;
-    text-align: center;
 }
 
-/* edit title*/
-.title{
-    width: 60%;
+/* Sizing login form */
+div.home{
+    width: 69%;
     margin: 15px auto;
-    padding: 10px;
     background-color: white;
 }
 
-/* edit line break*/
-hr{
-    border-top: 1px solid gray;
-    width: 62%;
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
 }
 
-/* Style around the buttons*/
-.button{
-    color: cornflowerblue;
-    background-color: cornflowerblue;
+/* Set a style for all buttons */
+button {
     color: white;
-    padding: 14px;
-    margin: 25px;
-    width: auto;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
     font-size: medium;
 }
-.buttonDiv{
-    background-color: whitesmoke;
-    margin: 15px auto;
-    width: 62%;
-    padding: 0px;
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: dodgerblue;
+    color: white;
+    opacity: .9;
 }
 
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 500px;
+/* Friends button */
+.Friends {
+    width: 28%;
+    float: left;
+    background-color: steelblue;
+    padding: 12px;
+}
+
+/* Profile button */
+.Profile {
+    width: 28%;
+    float: none;
+    background-color: steelblue;
+    padding: 12px;
+}
+
+/* Log off button */
+.LogOff {
+    width: 28%;
+    float: right;
+    background-color: steelblue;
+    padding: 12px;
+}
+
+
+/* .Friends {
+    width: 30%;
+    float: left;
+    background-color: steelblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    color: white;
+}
+
+.Profile {
+    width: 30%;
+    float: left;
+    background-color: steelblue;
+    padding: 12px;
+    margin-left: 33px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    color: white;
+}
+
+.LogOff {
+    width: 30%;
+    float: right;
+    background-color: steelblue;
+    padding: 12px;
+    margin-left: 33px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    color: white;
+} */
+
+/* Body paragraph*/
+.body{
+    font-family: Verdana, sans-serif;
+    font-size: medium;
+    color: midnightblue;
+}
+
+/* Title */
+.title {
+    font-family: Verdana, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    color: midnightblue;
+}
+
+hr {
+    border-top: 8px solid midnightblue;
+}
+
+/* Center the logo image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 12px 0 12px 0;
+}
+
+/* Logo image */
+img.logo {
+    width: 45%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    width: 95%;
+    text-align: center;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
 }
