@@ -38,9 +38,13 @@
             dataType: "json",
             success: function (msg) {
                 var responseFromServer = msg.d;
-                alert(responseFromServer);
-                ClearForm();
-                window.location.replace("index.html");
+                if (responseFromServer == "New Account was created!") {
+                    alert(responseFromServer);
+                    ClearForm();
+                    window.location.replace("homepage.html");
+                } else {
+                    alert(responseFromServer);
+                }
             },
             error: function (e) {
                 alert("Error: Unable to access the webservice.");

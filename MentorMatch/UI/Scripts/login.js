@@ -15,10 +15,12 @@ function LoginButtonHandler() {
         dataType: "json",
         success: function (msg) {
             var responseFromServer = msg.d;
-            alert(responseFromServer);
-            ClearForm()
-            // TODO: Change to be in ProjectServices.cs
-            window.location.replace("homepage.html")
+            if (responseFromServer == "Incorrect Username or password.") {
+                alert(responseFromServer);
+            } else {
+                ClearForm();
+                window.location.replace("homepage.html");
+            }
         },
         error: function (e) {
             alert("Error: Unable to access the webservice.");
