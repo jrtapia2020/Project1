@@ -47,6 +47,10 @@ nav a:hover{
 	background-color: dodgerblue;
 }
 
+#myProfile {
+	cursor: pointer;
+}
+
 hr {
 	border-top: 8px solid midnightblue;
 	width: 95%;

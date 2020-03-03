@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+
+    <!--JQUERY-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!--Scripts-->
+	<script src="../Scripts/profile.js"></script>
+
+    <!--CSS Link-->
     <link rel="stylesheet" type="text/css" href="../Styling/homePage.css">
 </head>
 <body>
@@ -21,7 +29,7 @@
             
             <div class="container">
                     <a class="Friends" onclick="javascript:window.location.href='friendsList.html'; return false;">My Friends</a>
-                    <a class="Profile" onclick="javascript:window.location.href='profile.html'; return false;">My Profile</a>
+                    <a class="Profile" onclick="ProfileButtonHandler()">My Profile</a>
                     <a class="LogOff" onclick="javascript:window.location.href='index.html'; return false;">Log Off</a>
             </div>
             

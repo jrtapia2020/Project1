@@ -47,6 +47,10 @@ nav a:hover{
 	background-color: dodgerblue;
 }
 
+#myProfile {
+	cursor: pointer;
+}
+
 div.profilemeat{
 	width: 100%;
 	margin: 15px auto;

@@ -7,6 +7,10 @@
 	<title>Ron Swanson</title>
 	<!--JQUERY-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+	<!--Scripts-->
+	<script src="../Scripts/profile.js"></script>
+
 	<!--CSS Link-->
 	<link rel="stylesheet" href="../Styling/profile.css">
 </head>
@@ -24,7 +28,7 @@
 		<nav>
 			<a href="homePage.html">Home</a> 
 			<a href="friendsList.html">My Friends</a> 
-			<a href="profile.html">My Profile</a> 
+			<a onclick="ProfileButtonHandler()" id="myProfile">My Profile</a>
 			<a href="index.html">Log Off</a>
 		</nav>
 	</div>

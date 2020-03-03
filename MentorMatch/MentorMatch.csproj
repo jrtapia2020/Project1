@@ -95,6 +95,7 @@
     <Content Include="UI\HTML\sign_up.html" />
     <Content Include="UI\HTML\index.html" />
     <Content Include="UI\Images\logo.jpg" />
+    <Content Include="UI\Scripts\profile.js" />
     <Content Include="UI\Scripts\sign_up.js" />
     <Content Include="UI\Scripts\login.js" />
     <Content Include="UI\Styling\sign_up.css" />

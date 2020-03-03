@@ -57,7 +57,7 @@ namespace MentorMatch
 					///// Ignore for now. /////
 					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
 					/////// TODO: Changed later to take to take to homepage //////
-					return "Correct credentials.";
+					return username;
 				}
 
 				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////
