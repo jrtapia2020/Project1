@@ -1,7 +1,8 @@
 /* Body font and background */
 body{
     font-family: Calibri, sans-serif;
-    background-color: lightskyblue;
+	background-color: lightskyblue;
+	padding: 0 100px;
 }
 
 /* Formatting the top bar */
@@ -30,29 +31,38 @@ nav {
 	display: inline-block;
 	float: right;
 	color: white;
+	margin-top: 30px;
 }
 
 nav a{
-	color: midnightblue;
+	color: white;
+	background-color: steelblue;
 	text-decoration: none;
 	margin: 0 10px 0 10px;
+	padding: 15px;
+	border-radius: 4px;
 }
 
 nav a:hover{
-	color: dodgerblue;
-	text-decoration: underline;
+	background-color: dodgerblue;
 }
 
 div.profilemeat{
 	width: 100%;
 	margin: 15px auto;
-	background-color: lightskyblue;
+	background-color: white;
+	border: 3px solid #f1f1f1;
 	color: white;
 }
 
 div.profileimg{
 	padding: 10px;
 	float: left;
+}
+
+div.profileimg img {
+	border: 4px solid midnightblue;
+	border-radius: 14px;
 }
 
 div.name{
@@ -64,12 +74,13 @@ div.geninfo{
 	display: inline-block;
 	margin: 10px;
 	margin-left: 0px;
-	padding: 10px;
+	padding: 10px 25px;
     border: 3px solid #f1f1f1;
 	height: 225px;
 	color: midnightblue;
-	background-color: white;
+	background-color: whitesmoke;
 	font-size: large;
+	border-radius: 4px;
 }
 
 div.bio{
@@ -79,6 +90,7 @@ div.bio{
 	padding: 10px;
     border: 3px solid #f1f1f1;
 	color: midnightblue;
-	background-color: white;
+	background-color: whitesmoke;
 	font-size: large;
+	border-radius: 4px;
 }

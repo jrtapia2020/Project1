@@ -79,6 +79,7 @@ select {
     cursor: pointer;
     width: 100%;
     font-size: medium;
+    border-radius: 2px;
 }
 
 .registerbtn:hover {
@@ -94,6 +95,7 @@ select {
     background-color: darkred;
     color: white;
     font-size: medium;
+    border-radius: 2px;
 }
 
 .cancel:hover {

@@ -6,7 +6,8 @@ body{
 
 /* Formatting the top bar */
 div.topbar{
-	width: 100%;
+	width: 90%;
+	padding: 5px;
 	height: 70px;
 	border: 1px solid #ccc;
 	margin: 15px auto;
@@ -30,20 +31,29 @@ nav {
 	display: inline-block;
 	float: right;
 	color: white;
+	margin-top: 30px;
 }
 
 nav a{
-	color: midnightblue;
+	color: white;
+	background-color: steelblue;
 	text-decoration: none;
 	margin: 0 10px 0 10px;
+	padding: 15px;
+	border-radius: 4px;
 }
 
 nav a:hover{
-	color: dodgerblue;
-	text-decoration: underline;
+	background-color: dodgerblue;
+}
+
+hr {
+	border-top: 8px solid midnightblue;
+	width: 95%;
 }
 
 div.friendmeat{
+	width: 90%;
 	background-color: white;
 	border: 3px solid #f1f1f1;
 	margin: 15px auto;
@@ -55,32 +65,35 @@ div.friendhead{
 	text-align: center;
 }
 
-
-div.list{
-	background-color: lightskyblue;
-	list-style-type: none;
+div.friendsTable{
+	margin: auto;
+	width: 100%;
 	padding: 10px;
-	border: 3px solid #f1f1f1;
 	margin: 15px;	
 	color: midnightblue;
 }
 
-div.list img{
-	border: 4px solid midnightblue;
-
+table {
+	margin: auto;
+	margin-left: 45px;
+	width: 90%;
 }
 
-li{
-	background-color: antiquewhite;
+div.friendsTable img{
+	border: 4px solid midnightblue;
+	border-radius: 14px;
+}
+
+td{
+	background-color: rgb(196, 239, 252);
 	border: 3px solid #f1f1f1;
-	margin: 15px 15px 15px 15px;
 	font-size: x-large;
 	color: midnightblue;
 }
 
-li a{
+td a{
 	color: midnightblue;
-	background-color: antiquewhite;
+	background-color: rgb(196, 239, 252);
 	text-decoration: none;
 	margin: 0 10px 0 10px;
 	padding: 15px;
@@ -88,6 +101,6 @@ li a{
 	vertical-align: middle;
 }
 
-li a:hover{
-	color: deeppink;
+td a:hover{
+	color: dodgerblue;
 }

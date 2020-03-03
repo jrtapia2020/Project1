@@ -37,6 +37,7 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: medium;
+    border-radius: 2px;
 }
 
 /* Hover effect for buttons */
