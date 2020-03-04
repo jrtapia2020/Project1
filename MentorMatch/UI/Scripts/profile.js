@@ -32,6 +32,6 @@ function FindMentorHandler() {
     $("#career").val("");
     $("#school").val("");
     $("#personal").val("");
-    alert("Message Sent!")
+    alert("Information Saved!")
     window.location.replace("homePage.html");
 }

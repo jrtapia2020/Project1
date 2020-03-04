@@ -52,8 +52,9 @@ nav a:hover{
 }
 
 div.profilemeat{
-	width: 100%;
+	width: 97.5%;
 	margin: 15px auto;
+	padding: 15px;
 	background-color: white;
 	border: 3px solid #f1f1f1;
 	color: white;
@@ -76,8 +77,8 @@ div.name{
 
 div.geninfo{
 	display: inline-block;
-	margin: 10px;
-	margin-left: 0px;
+	margin: 15px;
+	margin-left: 25px;
 	padding: 10px 25px;
     border: 3px solid #f1f1f1;
 	height: 225px;
@@ -85,6 +86,23 @@ div.geninfo{
 	background-color: whitesmoke;
 	font-size: large;
 	border-radius: 4px;
+}
+
+div.profileBtns a {
+	color: white;
+	background-color: midnightblue;
+	text-decoration: none;
+	margin-right: 20px;
+	padding: 12px;
+	border-radius: 4px;
+}
+
+div.profileBtns a:hover {
+	background-color: dodgerblue;
+}
+
+#email {
+	margin-left: 323px;
 }
 
 div.bio{
