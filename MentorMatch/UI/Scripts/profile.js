@@ -27,3 +27,11 @@ function ProfileButtonHandler() {
             window.location.replace("profile.html");
     }
 }
+
+function FindMentorHandler() {
+    $("#career").val("");
+    $("#school").val("");
+    $("#personal").val("");
+    alert("Message Sent!")
+    window.location.replace("homePage.html");
+}

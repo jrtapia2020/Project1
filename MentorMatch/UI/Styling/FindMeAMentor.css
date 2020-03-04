@@ -2,14 +2,16 @@ body{
     font-family: Calibri, sans-serif;
     background-color: lightskyblue;
 }
+
 div.home{
     width: 69%;
     margin: 15px auto;
     background-color: white;
 }
+
 /* Formatting the top bar */
 div.topbar{
-	width: 100%;
+	width: 90%;
 	height: 70px;
 	border: 1px solid #ccc;
 	margin: 15px auto;
@@ -49,14 +51,79 @@ nav a:hover{
 	background-color: dodgerblue;
 }
 
-input{
-    height: 100px;
-    width:  1240px;
-    word-wrap: normal;
+#findMentor {
+	width: 90%;
+	margin: 15px auto;
+	background-color: white;
+	border: 3px solid #f1f1f1;
 }
 
-/* Hover effect for linkss */
+div.heading {
+	text-align: center;
+}
+
+h1 {
+	font-size: 45px;
+	margin-bottom: 10px;
+}
+
+h3 {
+	width: 80%;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+hr {
+    border-top: 6px solid midnightblue;
+}
+
+div.center {
+	width: 90%;
+	margin: auto;
+	color: midnightblue;
+	padding: 25px;
+}
+
+label {
+	font-weight: bold;
+	font-size: x-large;
+	color: steelblue
+}
+
+textarea {
+    height: 75px;
+	width:  98%;
+	padding: 10px;
+	border: 2px solid steelblue;
+	word-wrap: normal;
+	font-size: 16px;
+	font-family: Calibri, sans-serif;
+}
+
+/* Hover effect for links */
 a:hover {
+    background-color: dodgerblue;
+    color: white;
+    opacity: .9;
+}
+
+/* Submit button */
+button {
+    background-color: midnightblue;
+    color: white;
+    padding: 14px 20px;
+	margin: 8px 0;
+	width: 95%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: large;
+    border-radius: 2px;
+}
+
+/* Hover effect for button */
+button:hover {
     background-color: dodgerblue;
     color: white;
     opacity: .9;
