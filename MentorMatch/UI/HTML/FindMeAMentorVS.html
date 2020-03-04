@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Me A Mentor!</title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styling/FindMeAMentor.css">
+</head>
+<body>
+    <div class="topbar">
+    <div class="logoimg">
+      <img src="../Images/logo.jpg" alt="Logo" class="logo" style="height:70px;width:70px;">
+    </div>
+
+    <div class="pagetop">
+      <h2>Mentor Match</h2>
+    </div>
+
+    <nav>
+      <a href="homePage.html">Home</a> 
+      <a href="friendsList.html">My Friends</a> 
+      <a onclick="ProfileButtonHandler()" id="myProfile">My Profile</a> 
+      <a href="index.html">Log Off</a>
+    </nav>
+  </div>
+    <table>
+        <div class="center">
+            <h1>Find Me A Mentor</h1>
+    
+            <h5>
+                <p>We want to find you the perfect mentor to help you succeed here at our University.  Please provide us with additional information
+                such as what your career goals are, what you are involved in on campus (or wish to be involved in), and what you like to do in your
+                recreational time as a student.  We will match you with a mentor that we think can help further you as a professional, as well as someone
+                who shares common interest! Once you submit this form you will receive an e-mail from admin@gmail.com about the next steps.</p>
+            </h5>
+
+          <form>
+                <label for="career">Career Goals:</label>
+                <br></br>
+              <input type="text" id="career" name="career"><br><br>
+                <label for="school">Campus Involvment/Clubs You would Like to Join:</label>
+                <br></br>
+              <input type="text" id="school" name="school"><br><br>
+                <label for="personal">Personal Interest:</label>
+                <br></br>
+              <input type="text" id="personal" name="personal"><br><br>
+              <button type="submit" value="homePage.html">Submit</button>
+            </form>
+        </div>
+    </table>
+</body>
+</html>
