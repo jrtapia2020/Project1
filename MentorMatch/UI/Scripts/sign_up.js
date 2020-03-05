@@ -41,7 +41,7 @@
                 if (responseFromServer == "New Account was created!") {
                     alert(responseFromServer);
                     ClearForm();
-                    window.location.replace("homepage.html");
+                    window.location.replace("index.html");
                 } else {
                     alert(responseFromServer);
                 }

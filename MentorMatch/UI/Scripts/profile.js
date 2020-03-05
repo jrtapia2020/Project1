@@ -1,5 +1,7 @@
 ﻿var profile = sessionStorage.getItem("profileSelector");
 
+// This would be changed in a future update to not cycle between hard coded profile pages.
+// A singular profile page would have its information changed with JQuery by the information pulled from the DB. 
 function ProfileButtonHandler() {
     switch (profile) {
         case "lknope":
@@ -28,6 +30,8 @@ function ProfileButtonHandler() {
     }
 }
 
+// Currently does not save information into DB. 
+// Would create WebMethod to connect to DB and input data into a new table. 
 function FindMentorHandler() {
     $("#career").val("");
     $("#school").val("");
