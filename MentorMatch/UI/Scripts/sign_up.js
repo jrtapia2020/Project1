@@ -5,13 +5,12 @@
     var psw_repeat = $("#psw-repeat").val();
     var fname = $("#fname").val();
     var lname = $("#lname").val();
-    var major1 = $("#major1").val();
-    var major2 = $("#major2").val();
-    var minor1 = $("#minor1").val();
-    var minor2 = $("#minor2").val();
-    var grade = $("#grade").val();
+    var email = $("#email").val();
+    var jobTitle = $("#jobTitle").val();
+    var defaultBio = "Hello! Welcome to my page.";
 
-    if (username == "" || password == "" || psw_repeat == "" || fname == "" || lname == "" || major1 == "") {
+
+    if (username == "" || password == "" || psw_repeat == "" || fname == "" || lname == "" || email == "") {
         alert("Error: Missing Required Fields! Please Complete Form.");
     }
     else if (password !== psw_repeat){
@@ -19,15 +18,13 @@
     } 
     else {
     var webMethod = "../../ProjectServices.asmx/CreateNewAccount";
-    var parameters = "{username: " + JSON.stringify(username) +
-                    ", password: " +JSON.stringify(password) + 
-                    ", firstname: " +JSON.stringify(fname) +
-                    ", lastname: " +JSON.stringify(lname) +
-                    ", major1: " +JSON.stringify(major1) +
-                    ", major2: " +JSON.stringify(major2) +
-                    ", minor1: " +JSON.stringify(minor1) +
-                    ", minor2: " +JSON.stringify(minor2) +
-                    ", grade: " +JSON.stringify(grade) + "}";
+    var parameters = "{employeeUsername: " + JSON.stringify(username) +
+                    ", employeePassword: " +JSON.stringify(password) + 
+                    ", employeeFirstName: " +JSON.stringify(fname) +
+                    ", employeeLastName: " +JSON.stringify(lname) +
+                    ", employeeJobTitle: " +JSON.stringify(jobTitle) +
+                    ", employeeEmail: " +JSON.stringify(email) + 
+                    ", employeeBio: " +JSON.stringify(defaultBio) + "}";
 
         //jQuery ajax method
         $.ajax({
