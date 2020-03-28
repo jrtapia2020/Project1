@@ -35,12 +35,12 @@ namespace MentorMatch
 		//to be exposed as a web service!
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
-		public string ConnectToServer(string username, string password)
+		public string ConnectToServer(string employeeUsername, string employeePassword)
 		{
 			MySqlConnection con = new MySqlConnection(getConString());
 			try
 			{
-				string Query = $"select * from users where username='{username}' and password='{password}'";
+				string Query = $"select * from employees where username='{employeeUsername}' and password='{employeePassword}'";
 
 				////////////////////////////////////////////////////////////////////////
 				///here's an example of using the getConString method!
@@ -57,7 +57,7 @@ namespace MentorMatch
 					///// Ignore for now. /////
 					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
 					/////// TODO: Changed later to take to take to homepage //////
-					return username;
+					return employeeUsername;
 				}
 
 				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////

@@ -6,7 +6,7 @@ function LoginButtonHandler() {
     var password = $("#password").val();
 
     var webMethod = "../../ProjectServices.asmx/ConnectToServer";
-    var parameters = "{username: " + JSON.stringify(username) + ", password: " +JSON.stringify(password) + "}";
+    var parameters = "{employeeUsername: " + JSON.stringify(username) + ", employeePassword: " +JSON.stringify(password) + "}";
 
     if (username == "" || password == "") {
         alert("Username or Password cannot be empty. Please input valid credentials.")
