@@ -25,7 +25,7 @@
 
       <nav>
         <a href="homePage.html">Home</a> 
-        <a href="friendsList.html">My Friends</a> 
+        <a href="friendsList.html">My Mentors</a> 
         <a onclick="ProfileButtonHandler()" id="myProfile">My Profile</a> 
         <a href="index.html">Log Off</a>
       </nav>
@@ -39,19 +39,19 @@
           <hr>
   
           <h3>
-              We want to find you the perfect mentor to help you succeed here at our University.  Please provide us with additional information
-              such as what your career goals are, what you are involved in on campus (or wish to be involved in), and what you like to do in your
-              recreational time as a student.  We will match you with a mentor that we think can help further you as a professional, as well as someone
-              who shares common interest! Once you submit this form you will receive an e-mail from admin@gmail.com about the next steps.
+              We want to find you the perfect mentor to help you succeed.  Please provide us with additional information
+              such as what skills you would like to learn, what skills you already have previous knowledge of, and what skills
+              you would like your mentor to possess. We will match you with a mentor that we think can help further you as a professional.
+              Once you submit this form you will receive an e-mail from admin@gmail.com about the next steps.
           </h3>
         </div>
 
         <form>
-            <label for="career">Career Goals:</label><br></br>
+            <label for="career">Skills wanted to be learned:</label><br></br>
             <textarea id="career" name="career"></textarea><br><br>
-            <label for="school">Campus Involvment/Clubs You would Like to Join:</label><br></br>
+            <label for="school">Skills already learned:</label><br></br>
             <textarea id="school" name="school"></textarea><br><br>
-            <label for="personal">Personal Interests:</label><br></br>
+            <label for="personal">Preferred mentor skills:</label><br></br>
             <textarea id="personal" name="personal"></textarea><br><br>
             <button type="button" onclick="FindMentorHandler()">Submit</button>
           </form>
