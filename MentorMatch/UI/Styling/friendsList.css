@@ -1,7 +1,7 @@
 /* Body font and background */
 body{
-    font-family: Calibri, sans-serif;
-    background-color: lightskyblue;
+    font-family: "optima", sans-serif;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
 }
 
 /* Formatting the top bar */
@@ -11,8 +11,9 @@ div.topbar{
 	height: 70px;
 	border: 1px solid #ccc;
 	margin: 15px auto;
-	background-color: white;
-	color: midnightblue;
+	background-color: honeydew;
+	text-shadow: 2px 2px 8px gray;
+	color: crimson;
 }
 
 /* Formatting logo */
@@ -36,15 +37,17 @@ nav {
 
 nav a{
 	color: white;
-	background-color: steelblue;
+	background-image: linear-gradient(to right, #D4145A, #FBB03B);
+	border: 2px solid black;
 	text-decoration: none;
 	margin: 0 10px 0 10px;
 	padding: 15px;
 	border-radius: 4px;
 }
 
+
 nav a:hover{
-	background-color: dodgerblue;
+	background-color: orange;
 }
 
 #myProfile {
@@ -52,16 +55,17 @@ nav a:hover{
 }
 
 hr {
-	border-top: 8px solid midnightblue;
+	border-top: 8px solid crimson;
 	width: 95%;
 }
 
 div.friendmeat{
 	width: 90%;
-	background-color: white;
-	border: 3px solid #f1f1f1;
+	background-color: honeydew;
+	border: 3px solid black;
 	margin: 15px auto;
-	color: midnightblue;
+	color: crimson;
+	text-shadow: 2px 2px 8px gray;
 }
 
 div.friendhead{
@@ -74,7 +78,7 @@ div.friendsTable{
 	width: 100%;
 	padding: 10px;
 	margin: 15px;	
-	color: midnightblue;
+	color: crimson;
 }
 
 table {
@@ -83,7 +87,7 @@ table {
 }
 
 div.friendsTable img {
-	border: 4px solid midnightblue;
+	border: 4px solid black;
 	border-radius: 14px;
 }
 
@@ -92,15 +96,16 @@ div.friendsTable img {
 }
 
 td {
-	background-color: rgb(196, 239, 252);
-	border: 3px solid #f1f1f1;
+	background-color: white;
+	border: 3px solid black;
 	font-size: x-large;
-	color: midnightblue;
+	color: crimson;
 }
 
 td a {
-	color: midnightblue;
-	background-color: rgb(196, 239, 252);
+	color: crimson;
+	background-color: white;
+
 	text-decoration: none;
 	margin: 0 10px 0 10px;
 	padding: 15px;
@@ -109,5 +114,5 @@ td a {
 }
 
 td a:hover {
-	color: dodgerblue;
+	color: orange;
 }
