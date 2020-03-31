@@ -1,19 +1,19 @@
 /* Body font and background */
 body{
-    font-family: Calibri, sans-serif;
-    background-color: lightskyblue;
+    font-family: "optima", sans-serif;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
 }
 
 /* Sizing login form */
 div.login{
     width: 50%;
     margin: 15px auto;
-    background-color: white;
+    background-color: honeydew;
 }
 
 /* Bordered form */
 form {
-    border: 3px solid #f1f1f1;
+    border: 3px solid black;
 }
 
 /* Full-width inputs */
@@ -34,11 +34,11 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-    background-color: midnightblue;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
+    border: 2px solid black;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
     width: 100%;
     font-size: medium;
@@ -51,6 +51,7 @@ button:hover {
     color: white;
     opacity: .9;
 }
+
 
 /* Cancel button */
 .cancel {
@@ -83,14 +84,17 @@ button:hover {
 
 /* Title */
 .title {
-    font-family: Verdana, sans-serif;
+    font-family: "new century schoolbook", "tex gyre schola" serif;
     font-size: 150%;
+    font-weight: bolder;
     text-align: center;
-    color: midnightblue;
+    color: crimson;
+    text-shadow: 2px 2px 8px gray;
 }
 
 hr {
-    border-top: 8px solid midnightblue;
+    border-top: 8px solid crimson;
+    
 }
 
 /* Center the logo image inside this container */
