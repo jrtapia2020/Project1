@@ -1,0 +1,79 @@
+body{
+    font-family: "optima", sans-serif;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
+}
+
+
+/* Formatting the top bar */
+div.topbar{
+	width: 90%;
+	height: 70px;
+	border: 2px solid black;
+	margin: 15px auto;
+	background-color: honeydew;
+	color: crimson;
+	text-shadow: 2px 2px 8px gray;
+
+}
+
+/* Formatting logo */
+div.logoimg{
+	float: left;
+	margin-right: 10px;
+}
+
+/* Display text next to logo */
+div.pagetop{
+	display: inline-block;
+}
+
+/* Following nav sections are for the home/my profile/sign out bar */
+nav {
+	float: right;
+	color: white;
+	margin-top: 30px;
+}
+
+nav a{
+	color: white;
+	background-image: linear-gradient(to right, #D4145A, #FBB03B);
+	border: 2px solid black;
+	text-decoration: none;
+	margin: 0 10px 0 10px;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+#empList {
+	width: 90%;
+	margin: 15px auto;
+	background-color: honeydew;
+	border: 3px solid black;
+}
+
+div.heading {
+	text-align: center;
+}
+
+h1 {
+	font-size: 45px;
+	margin-bottom: 10px;
+}
+
+
+hr {
+    border-top: 6px solid crimson;
+}
+
+div.center {
+	width: 90%;
+	margin: auto;
+	color: crimson;
+	text-shadow: 2px 2px 8px gray;
+	padding: 25px;
+}
+
+table.names {
+    font-size: x-large;
+    color: black;
+}
