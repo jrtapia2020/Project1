@@ -20,11 +20,16 @@ function LoginButtonHandler() {
         dataType: "json",
         success: function (msg) {
             var responseFromServer = msg.d;
-            if (responseFromServer == "Incorrect Username or password.") {
-                alert(responseFromServer);
+            if (responseFromServer[0] == "incorrect") {
+                alert("Incorrect Username or password.");
             } else {
-                profileSelector = responseFromServer;
-                sessionStorage.setItem("profileSelector", profileSelector);
+                sessionStorage.setItem("username", responseFromServer[0]);
+                sessionStorage.setItem("fName", responseFromServer[1]);
+                sessionStorage.setItem("lName", responseFromServer[2]);
+                sessionStorage.setItem("jobTitle", responseFromServer[3]);
+                sessionStorage.setItem("email", responseFromServer[4]);
+                sessionStorage.setItem("bio", responseFromServer[5]);
+                sessionStorage.setItem("personality", responseFromServer[6]);
                 ClearForm();
                 window.location.replace("homePage.html");
             }

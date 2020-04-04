@@ -56,9 +56,6 @@ function ClearForm() {
     $("#psw-repeat").val("");
     $("#fname").val("");
     $("#lname").val("");
-    $("#major1").val("");
-    $("#major2").val("");
-    $("#minor1").val("");
-    $("#minor2").val("");
-    $("#grade").val("Freshman");
+    $("#email").val("");
+    $("#jobTitle").val("");
 }

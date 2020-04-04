@@ -16,7 +16,7 @@
 	<link rel="icon" href="../Images/logo.png">
 </head>
 
-<body>
+<body onload="ProfileHandler()">
 	<div class="topbar">
 		<div class="logoimg">
 			<img src="../Images/logo.png" alt="Logo" class="logo" style="height:70px;width:70px;">
@@ -30,7 +30,7 @@
 			<a href="homePage.html">Home</a> 
 			<a href="FindMeAMentorVS.html">Find Mentor</a>
 			<a href="friendsList.html">My Mentors</a> 
-			<!-- <a href="profile.html">My Profile</a>  -->
+			<a href="profile.html">My Profile</a>
 			<a href="index.html">Log Off</a>
 		</nav>
 	</div>
@@ -38,18 +38,18 @@
 	<div class="profilemeat">
 		<div class="profilehead">
 			<div class="profileimg">
-				<img src="../Images/profilePic.png" alt="profilepic" style="height:250px;width:300px;">
+				<img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:300px;">
 			</div>
 		</div>
 
 		<div class="geninfo">
 			<div class="name">
-				<h1>John Doe</h1>
+				<h1 id="profileName">John Doe</h1>
 			</div>
 				
 			<ui>
-				<li><b>Skills learned:</b> Python, Java, HTML</li>
-				<li><b>Skills in progress:</b> C#,C++,CSS</li>
+				<li><b>Job Title:</b> <span id="profileJobTitle">Title</span></li>
+				<li><b>Personality Type:</b> <span id="profilePersonality">Personality</span></li>
 			</ui>
 
 			<div class="profileBtns">
@@ -62,7 +62,7 @@
 
 		<div class="bio">
 			<h2><u>Biography</u></h2>
-			<p>Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.  
+			<p id="profileBio">Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.  
 				I am excited to connect with mentors to help me improve my coding skills.
 		</div> 
 	</div>

@@ -35,29 +35,35 @@ namespace MentorMatch
 		//to be exposed as a web service!
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
-		public string ConnectToServer(string employeeUsername, string employeePassword)
+		public string[] ConnectToServer(string employeeUsername, string employeePassword)
 		{
 			MySqlConnection con = new MySqlConnection(getConString());
 			try
 			{
-				string Query = $"select * from employees where username='{employeeUsername}' and password='{employeePassword}'";
+				string Query = $"select * from employees where employeeUsername='{employeeUsername}' and employeePassword='{employeePassword}'";
 
-				////////////////////////////////////////////////////////////////////////
-				///here's an example of using the getConString method!
-				////////////////////////////////////////////////////////////////////////
-				//MySqlConnection con = new MySqlConnection(getConString());
-				////////////////////////////////////////////////////////////////////////
 				con.Open();
 
 				MySqlCommand cmd = new MySqlCommand(Query, con);
 				MySqlDataReader rdr = cmd.ExecuteReader();
 
-				if (rdr.Read())
+				if (rdr.Read())  
 				{
 					///// Ignore for now. /////
 					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
-					/////// TODO: Changed later to take to take to homepage //////
-					return employeeUsername;
+
+					string username = rdr[1].ToString();
+					string fName = rdr[3].ToString();
+					string lName = rdr[4].ToString();
+					string jobTitle = rdr[5].ToString();
+					string email = rdr[6].ToString();
+					string bio = rdr[7].ToString();
+					string personality = rdr[8].ToString();
+
+
+					string[] employeeInfo = {username, fName, lName, jobTitle, email, bio, personality};
+
+					return employeeInfo;
 				}
 
 				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////
@@ -66,12 +72,14 @@ namespace MentorMatch
 				adapter.Fill(table);*/
 				else
 				{
-					return "Incorrect Username or password.";
+					string[] incorrect = {"incorrect"};
+					return incorrect;
 				}
 			}
 			catch (Exception e)
 			{
-				return "Error: " + e.Message;
+				string[] error = {"Error: " + e.Message};
+				return error;
 			}
 			finally
 			{
