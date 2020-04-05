@@ -1,0 +1,68 @@
+﻿body {
+    font-family: "optima", sans-serif;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
+}
+
+.data {
+    float: left;
+    padding: 30px;
+    margin: 35px;
+}
+
+.tableau {
+    float: left;
+    padding: 30px;
+    margin: 35px;
+}
+
+.python {
+    float: left;
+    padding: 30px;
+    margin: 35px;
+}
+
+img {
+    height: 110px;
+    width: 180px;
+}
+
+div.topbar {
+    width: 90%;
+    height: 70px;
+    border: 1px solid #ccc;
+    margin: 15px auto;
+    background-color: white;
+    color: red;
+}
+
+/* Formatting logo */
+div.logoimg {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Display text next to logo */
+div.pagetop {
+    display: inline-block;
+}
+
+/* Following nav sections are for the home/my profile/sign out bar */
+nav {
+    display: inline-block;
+    float: right;
+    color: white;
+    margin-top: 30px;
+}
+
+    nav a {
+        color: white;
+        background-color: orangered;
+        text-decoration: none;
+        margin: 0 10px 0 10px;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+        nav a:hover {
+            background-color: yellow;
+        }
