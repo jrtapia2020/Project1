@@ -2,22 +2,40 @@
     font-family: "optima", sans-serif;
     background-image: linear-gradient(to right, #D4145A, #FBB03B);
 }
+.material {
+    width: 90%;
+    margin: 15px auto;
+    background-color: honeydew;
+    border: 3px solid black;
+}
+
+.center {
+    width: 90%;
+    margin: auto;
+    color: crimson;
+    text-shadow: 2px 2px 8px gray;
+    padding: 25px;
+}
+
+.heading {
+    text-align: center;
+}
 
 .data {
     float: left;
-    padding: 30px;
+    padding: 35px;
     margin: 35px;
 }
 
 .tableau {
     float: left;
-    padding: 30px;
+    padding: 35px;
     margin: 35px;
 }
 
 .python {
     float: left;
-    padding: 30px;
+    padding: 35px;
     margin: 35px;
 }
 
@@ -54,15 +72,15 @@ nav {
     margin-top: 30px;
 }
 
-    nav a {
-        color: white;
-        background-color: orangered;
-        text-decoration: none;
-        margin: 0 10px 0 10px;
-        padding: 15px;
-        border-radius: 4px;
-    }
+nav a {
+    color: white;
+    background-color: orangered;
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    padding: 15px;
+    border-radius: 4px;
+}
 
-        nav a:hover {
-            background-color: yellow;
-        }
+nav a:hover {
+    background-color: yellow;
+}
