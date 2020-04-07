@@ -19,6 +19,7 @@
 
 .heading {
     text-align: center;
+    border-radius: 4px;
 }
 
 .data {
@@ -27,6 +28,7 @@
     margin: 35px;
     background-color: honeydew;
     border-radius: 4px;
+    border: 3px solid black;
 }
 
 .tableau {
@@ -35,6 +37,7 @@
     margin: 35px;
     background-color: honeydew;
     border-radius: 4px;
+    border: 3px solid black;
 }
 
 .python {
@@ -43,6 +46,7 @@
     margin: 35px;
     background-color: honeydew;
     border-radius: 4px;
+    border: 3px solid black;
 }
 
 img {
