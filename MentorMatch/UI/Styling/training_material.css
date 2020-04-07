@@ -25,23 +25,30 @@
     float: left;
     padding: 35px;
     margin: 35px;
+    background-color: honeydew;
+    border-radius: 4px;
 }
 
 .tableau {
     float: left;
     padding: 35px;
     margin: 35px;
+    background-color: honeydew;
+    border-radius: 4px;
 }
 
 .python {
     float: left;
     padding: 35px;
     margin: 35px;
+    background-color: honeydew;
+    border-radius: 4px;
 }
 
 img {
     height: 110px;
     width: 180px;
+    margin: auto;
 }
 
 div.topbar {
@@ -66,21 +73,24 @@ div.pagetop {
 
 /* Following nav sections are for the home/my profile/sign out bar */
 nav {
-    display: inline-block;
-    float: right;
-    color: white;
-    margin-top: 30px;
+	display: inline-block;
+	float: right;
+	color: black;
+	margin-top: 30px;
+	
 }
 
-nav a {
-    color: white;
-    background-color: orangered;
-    text-decoration: none;
-    margin: 0 10px 0 10px;
-    padding: 15px;
-    border-radius: 4px;
+nav a{
+	color: white;
+	background-image: linear-gradient(to right, #D4145A, #FBB03B);
+	border: 2px solid black;
+	text-decoration: none;
+	margin: 0 10px 0 10px;
+	padding: 15px;
+	border-radius: 4px;
 }
 
-nav a:hover {
-    background-color: yellow;
+nav a:hover{
+	background-color: orange;
+	cursor: pointer;
 }

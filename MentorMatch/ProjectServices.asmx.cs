@@ -91,14 +91,14 @@ namespace MentorMatch
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
 		public string CreateNewAccount(string employeeUsername, string employeePassword, string employeeFirstName, string employeeLastName,
-										string employeeJobTitle, string employeeEmail, string employeeBio)
+										string employeeJobTitle, string employeeEmail, string employeeBio, string employeePersonalityType)
 		{
 
 			MySqlConnection con = new MySqlConnection(getConString());
 			try
 			{
-				string Query = $"INSERT INTO employees (employeeUsername, employeePassword, employeeFirstName, employeeLastName, employeeJobTitle, employeeEmail, employeeBio) " +
-							   $"VALUES ('{employeeUsername}', '{employeePassword}', '{employeeFirstName}', '{employeeLastName}', '{employeeJobTitle}', '{employeeEmail}', '{employeeBio}');";
+				string Query = $"INSERT INTO employees (employeeUsername, employeePassword, employeeFirstName, employeeLastName, employeeJobTitle, employeeEmail, employeeBio, employeePersonalityType) " +
+							   $"VALUES ('{employeeUsername}', '{employeePassword}', '{employeeFirstName}', '{employeeLastName}', '{employeeJobTitle}', '{employeeEmail}', '{employeeBio}', '{employeePersonalityType}');";
 
 				MySqlCommand cmd = new MySqlCommand(Query, con);
 

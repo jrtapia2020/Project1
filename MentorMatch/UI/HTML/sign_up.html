@@ -40,36 +40,31 @@
                 <label for="jobTitle"><b>Job Title</b><span>*</span></label>
                 <input type="text" placeholder="Enter Job Title" name="jobTitle" id="jobTitle" required>
 
-                <label for="personalityType"><b>Personality Type</b><span>*</span></label>
-
                 <br>
-
-				<a class="personalityTest" onclick="javascript:window.location.href='https://www.16personalities.com/free-personality-test'; return false;">Click HERE to take your personality test!</a>
-
-				<br>
-
-                <label for="personalityType">Personality Type:</label>
-
-					<select id="personalityType">
-  						<option value="INTJ">Architect</option>
-  						<option value="INTP">Logician</option>
-  						<option value="ENTJ">Commander</option>
-  						<option value="ENTP">Debater</option>
-  						<option value="INFJ">Advocate</option>
-  						<option value="INFP">Mediator</option>
-  						<option value="ENFJ">Protagonist</option>
-  						<option value="ENFP">Campaigner</option>
-  						<option value="ISTJ">Logistician</option>
-  						<option value="ISFJ">Defender</option>
-  						<option value="ESTJ">Executive</option>
-  						<option value="ESFJ">Consul</option>
-  						<option value="ISTP">Virtuoso</option>
-  						<option value="ISFP">Adventurer</option>
-  						<option value="ESTP">Entrepreneur</option>
-  						<option value="ESFP">Entertainer</option>
-					</select>
+                <label for="personalityType"><b>Personality Type</b><span>*</span></label>
+                <br>
+                <select id="personalityType" aria-placeholder="Selection" required>
+                    <option selected="true" disabled="disabled">Select Personality</option>
+                    <option value="INTJ">Architect</option>
+                    <option value="INTP">Logician</option>
+                    <option value="ENTJ">Commander</option>
+                    <option value="ENTP">Debater</option>
+                    <option value="INFJ">Advocate</option>
+                    <option value="INFP">Mediator</option>
+                    <option value="ENFJ">Protagonist</option>
+                    <option value="ENFP">Campaigner</option>
+                    <option value="ISTJ">Logistician</option>
+                    <option value="ISFJ">Defender</option>
+                    <option value="ESTJ">Executive</option>
+                    <option value="ESFJ">Consul</option>
+                    <option value="ISTP">Virtuoso</option>
+                    <option value="ISFP">Adventurer</option>
+                    <option value="ESTP">Entrepreneur</option>
+                    <option value="ESFP">Entertainer</option>
+                </select>
+                
+                <a id="personalityTest" href='https://www.16personalities.com/free-personality-test' target="_blank">Click HERE to take your personality test!</a>
             
-
                 <hr>
 
                 <label for="user"><b>Username</b><span>*</span></label>

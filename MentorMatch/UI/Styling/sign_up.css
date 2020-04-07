@@ -66,8 +66,13 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 select {
-    margin: 5px;
-    padding: 3px;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
     font-size: medium;
 }
 

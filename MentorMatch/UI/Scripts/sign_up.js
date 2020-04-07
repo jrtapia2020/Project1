@@ -26,7 +26,7 @@
                     ", employeeJobTitle: " +JSON.stringify(jobTitle) +
                     ", employeeEmail: " +JSON.stringify(email) + 
                     ", employeeBio: " +JSON.stringify(defaultBio) + 
-                    ", employeePersonalityType: " +JSON.stringify(personalityType)"}";
+                    ", employeePersonalityType: " +JSON.stringify(personalityType)+"}";
 
 
         //jQuery ajax method
@@ -61,4 +61,5 @@ function ClearForm() {
     $("#lname").val("");
     $("#email").val("");
     $("#jobTitle").val("");
+    $("#personalityType").prop('selectedIndex', 0);
 }
