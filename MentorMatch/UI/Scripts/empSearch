@@ -1,0 +1,10 @@
+"use strict";
+
+var fName = sessionStorage.getItem("fName");
+var lName = sessionStorage.getItem("lName");
+var jobTitle = sessionStorage.getItem("jobTitle");
+var table = document.getElementById("names");
+
+function listProfile(){
+    getElementById("names").innerHTML
+}
