@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <!--Scripts-->
-    <script src="../Scripts/profile.js"></script>
+    <script src="empSearch.js"></script>
 
     <!--CSS Link-->
     <link rel="stylesheet" type="text/css" href="../Styling/empSearch.css">
@@ -31,21 +31,38 @@
       </nav>
   </div>
 
-    <div id="empList">
-      <div class="center">
-        <div class="heading">
-          <h1>List of Employees</h1>
+    
+    <div class="center">
+      <div class="heading">          
+        <h1>List of Employees</h1>
 
-          <hr>
-
-        <table class="names">
-            <tr>John Doe - Job Title: </tr>
-        </table>
-
-        </div>
-
-
+        <hr>
       </div>
+        <div class="list">
+          <table id="names" onload="listProfile()">
+            <tr>
+              <td>
+                <img src="../Images/mscott.jpg" alt="Profile Picture" class="picture"> <a href="../html/profile.html"><b>Michael Scott</b></a> - Regional Manger</tr>
+              </td>
+             
+            <tr>
+              <td>
+                <img src="../Images/dschrute.jpg" alt="Profile Picture" class="picture">  <a href="../html/profile.html"><b>Dwight Schrute</b></a> - Assistant to the Regional Manager</tr>
+              </td>
+           <tr>
+              <td>
+                <img src="../Images/kmalone.jpg" alt="Profile Picture" class="picture">  <a href="../html/profile.html"><b>Kevin Malone</b></a> - Accountant</tr>
+              </td>
+            <tr>
+                <td>
+                  <img src="../Images/jhalpert.jpg" alt="Profile Picture" class="picture"> <a href="../html/profile.html"><b>Jim Halpert</b></a> - Director of Sales</tr>
+                </td>
+          </table>
+        </div>
+      
+
+
+      
     </div>
 </body>
 </html>

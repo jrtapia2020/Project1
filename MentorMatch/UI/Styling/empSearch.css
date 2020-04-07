@@ -51,29 +51,52 @@ nav a{
 	border: 3px solid black;
 }
 
-div.heading {
-	text-align: center;
-}
 
 h1 {
 	font-size: 45px;
 	margin-bottom: 10px;
 }
 
+.center {
+	border: 2px solid black;
+	background-color: honeydew;
+	margin-left: 5em;
+	margin-right: 5em;
+	
+}
 
 hr {
     border-top: 6px solid crimson;
 }
 
-div.center {
-	width: 90%;
-	margin: auto;
+.heading {
 	color: crimson;
 	text-shadow: 2px 2px 8px gray;
-	padding: 25px;
+	text-align: center;
+	
+	
 }
 
-table.names {
-    font-size: x-large;
-    color: black;
+table {
+	width: 732px;
+}
+
+.list{
+    font-size: 25px;
+	color: black;
+	
+}
+
+td {
+	border-bottom: 1pt dotted crimson;
+}
+
+.picture {
+	border: 2px solid black;
+	height: 100px;
+	width: 100px;
+}
+
+a {
+	color: black;
 }
