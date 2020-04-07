@@ -26,6 +26,8 @@ a:hover {
 /* Friends Link*/
 .FindMentor {
     background-image: linear-gradient(to right, #D4145A, #FBB03B);
+    margin-left: 10px;
+    margin-right: 15px;
     padding: 12px;
     cursor: pointer;
     font-size: x-large;
@@ -33,11 +35,12 @@ a:hover {
     color: white;
 }
 
-/* Friends Link*/
-.Friends {
+/* Mentors Link*/
+.Employees {
     background-image: linear-gradient(to right, #D4145A, #FBB03B);
     padding: 12px;
-    margin-left: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
     cursor: pointer;
     border: 2px solid black;
     font-size: x-large;
@@ -48,8 +51,20 @@ a:hover {
 .Profile {
     background-image: linear-gradient(to right, #D4145A, #FBB03B);
     padding: 12px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: x-large;
+    color: white;
+}
+
+/* Profile Link*/
+.Training {
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
+    padding: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
     border: 2px solid black;
     cursor: pointer;
     font-size: x-large;
@@ -58,8 +73,10 @@ a:hover {
 
 /* Log Off Link*/
 .LogOff {
-    background-color: crimson;
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
     padding: 12px;
+    margin-left: 15px;
+    margin-right: 10px;
     border: 2px solid black;
     cursor: pointer;
     font-size: x-large;
