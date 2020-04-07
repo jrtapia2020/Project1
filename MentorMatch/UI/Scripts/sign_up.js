@@ -8,6 +8,7 @@
     var email = $("#email").val();
     var jobTitle = $("#jobTitle").val();
     var defaultBio = "Hello! Welcome to my page.";
+    var personalityType = $("#personalityType").val();
 
 
     if (username == "" || password == "" || psw_repeat == "" || fname == "" || lname == "" || email == "") {
@@ -24,7 +25,9 @@
                     ", employeeLastName: " +JSON.stringify(lname) +
                     ", employeeJobTitle: " +JSON.stringify(jobTitle) +
                     ", employeeEmail: " +JSON.stringify(email) + 
-                    ", employeeBio: " +JSON.stringify(defaultBio) + "}";
+                    ", employeeBio: " +JSON.stringify(defaultBio) + 
+                    ", employeePersonalityType: " +JSON.stringify(personalityType)"}";
+
 
         //jQuery ajax method
         $.ajax({
