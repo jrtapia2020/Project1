@@ -1,10 +1,8 @@
 ﻿"use strict";
 
 let username = sessionStorage.getItem("username");
-let profilePic = '../Images/profilePic.png';
-if (http.status != 404) {
-    profilePic = `../Images/${username}.jpg`;
-}
+let profilePic = `../Images/${username}.jpg`;
+//let profilePic = '../Images/profilePic.png';  || Needs to be worked on to allow for a default picture when user does not have one
 let fName = sessionStorage.getItem("fName");
 let lName = sessionStorage.getItem("lName");
 let jobTitle = sessionStorage.getItem("jobTitle");
