@@ -92,6 +92,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="ProjectServices.asmx" />
+    <Content Include="UI\HTML\mentor_page.html" />
     <Content Include="UI\HTML\sign_up.html" />
     <Content Include="UI\HTML\index.html" />
     <Content Include="UI\HTML\training_material.html" />
