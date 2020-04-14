@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MM Mentor Page</title>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Scripts-->
+    <script src="../Scripts/profile.js"></script>
+
+    <!--CSS Link-->
+    <link rel="stylesheet" href="../Styling/mentor_page.css">
+    <link rel="icon" href="../Images/logo.png">
+</head>
+
+<body onload="ProfileHandler()">
+    <div class="topbar">
+        <div class="logoimg">
+            <img src="../Images/logo.png" alt="Logo" class="logo" style="height:70px;width:70px;">
+        </div>
+
+        <div class="pagetop">
+            <h2>Mentor Match Pro</h2>
+        </div>
+
+        <nav>
+            <a href="homePage.html">Home</a>
+            <a href="FindMeAMentorVS.html">Find Mentor</a>
+            <a href="groupsPage.html">Groups</a>
+            <a href="training_material.html">My Training</a>
+            <a href="profile.html">My Profile</a>
+            <a href="index.html">Log Off</a>
+        </nav>
+    </div>
+
+    <div class="profilemeat">
+        <div class="profilehead">
+            <div class="profileimg">
+                <img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:300px;">
+            </div>
+        </div>
+
+        <div class="geninfo">
+            <div class="name">
+                <h1 id="profileName">John Doe</h1>
+            </div>
+
+            <ui>
+                <li><b>Job Title:</b> <span id="profileJobTitle">Title</span></li>
+                <li><b>Personality Type:</b> <span id="profilePersonality">Personality</span></li>
+            </ui>
+
+            <div class="profileBtns">
+                <a href="mailto:admin@gmail.com" id="email">Send Email</a>
+            </div>
+        </div>
+
+        <div class="bio">
+            <h2><u>Biography</u></h2>
+            <p id="profileBio">
+                Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.
+                I am excited to connect with mentors to help me improve my coding skills.
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+</body>
+</html>
