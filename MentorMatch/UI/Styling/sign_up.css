@@ -46,7 +46,8 @@ span {color: darkred;}
 /* Logo image */
 img.logo {
     width: 25%;
-    border-radius: 50%;
+    border: 3px solid grey;
+    border-radius: 12px;
 }
 
 /* Information Input */
