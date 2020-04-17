@@ -9,17 +9,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!--Scripts-->
-    <script src="../Scripts/profile.js"></script>
+    <script src="../Scripts/mentor.js"></script>
 
     <!--CSS Link-->
-    <link rel="stylesheet" href="../Styling/mentor_page.css">
+    <link rel="stylesheet" href="../Styling/mentor.css">
     <link rel="icon" href="../Images/logo.png">
 </head>
 
-<body onload="ProfileHandler()">
+<!--<body onload="MentorHandler()">-->
+<body onload="MentorHandler()">
     <div class="topbar">
         <div class="logoimg">
-            <img src="../Images/logo.png" alt="Logo" class="logo" style="height:70px;width:70px;">
+            <img src="../Images/logo.png" alt="Logo" class="logo" style="height:68px;width:69px;border-radius: 4px;">
         </div>
 
         <div class="pagetop">
@@ -39,7 +40,7 @@
     <div class="profilemeat">
         <div class="profilehead">
             <div class="profileimg">
-                <img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:300px;">
+                <img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:250px;">
             </div>
         </div>
 
@@ -48,19 +49,20 @@
                 <h1 id="profileName">John Doe</h1>
             </div>
 
-            <ui>
-                <li><b>Job Title:</b> <span id="profileJobTitle">Title</span></li>
-                <li><b>Personality Type:</b> <span id="profilePersonality">Personality</span></li>
-            </ui>
+            <ul>
+                <li><b>Job Title:</b> <span id="profileJobTitle" style="color: black;">Title</span></li>
+				<li><b>Personality Type:</b> <span id="profilePersonality" style="color: black;">Personality</span></li>
+                <li><b>Skills:</b> <span id="profileSkills" style="color: black;">Skills</span></li>
+            </ul>
 
             <div class="profileBtns">
-                <a href="mailto:admin@gmail.com" id="email">Send Email</a>
+                <a href="mailto:admin@gmail.com" id="myEmail">Send Email</a>
             </div>
         </div>
 
         <div class="bio">
             <h2><u>Biography</u></h2>
-            <p id="profileBio">
+            <p id="profileBio" style="color: black;">
                 Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.
                 I am excited to connect with mentors to help me improve my coding skills.
         </div>

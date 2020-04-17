@@ -30,6 +30,8 @@ function LoginButtonHandler() {
                 sessionStorage.setItem("email", responseFromServer[4]);
                 sessionStorage.setItem("bio", responseFromServer[5]);
                 sessionStorage.setItem("personality", responseFromServer[6]);
+                sessionStorage.setItem("skill", responseFromServer[7]);
+                sessionStorage.setItem("mentorID", responseFromServer[8]);
                 ClearForm();
                 window.location.replace("homePage.html");
             }

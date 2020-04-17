@@ -49,14 +49,15 @@
 				<h1 id="profileName">John Doe</h1>
 			</div>
 				
-			<ul style="list-style-type:none;">
+			<ul>
 				<li><b>Job Title:</b> <span id="profileJobTitle" style="color: black;">Title</span></li>
 				<li><b>Personality Type:</b> <span id="profilePersonality" style="color: black;">Personality</span></li>
+				<li><b>Skills:</b> <span id="profileSkills" style="color: black;">Skills</span></li>
 			</ul>
 
 			<div class="profileBtns">
 				<a href="mailto:admin@gmail.com" id="myEmail">Send Email</a>
-				<a href="mentor_page.html" id="myMentor">My Mentor</a>
+				<a onclick="javascript:GetMentorInfo()" id="myMentor">My Mentor</a>
 				<a onclick="javascript:EditInfo()" id="infoModalBtn">Edit Info</a>
 				<a onclick="javascript:EditPicture()" id="pictureModalBtn">Edit Profile Picture</a>
 			</div>
@@ -108,6 +109,9 @@
 					
 					<a id="personalityTest" href='https://www.16personalities.com/free-personality-test' target="_blank">Click HERE to take your personality test!</a>
 				
+					<label for="newSkills"><b>New Skills</b><span>*</span></label><br>
+					<textarea maxlength="50" placeholder="Show off your skills!" name="newSkills" id="newSkills" required></textarea>
+
 					<label for="newBio"><b>New Bio (About Me)</b><span>*</span></label><br>
 					<textarea maxlength="150" placeholder="Tell us about yourself!" name="newBio" id="newBio" required></textarea>
 

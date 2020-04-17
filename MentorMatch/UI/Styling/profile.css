@@ -109,7 +109,11 @@ div.profileBtns a:hover {
 	cursor: pointer;
 }
 
-ul {margin: 0;}
+ul {
+	margin: 0;
+	list-style-type:none;
+}
+
 #myEmail {margin-left: 320px;}
 
 /* The Modal (background) */
@@ -185,7 +189,7 @@ input[type=text], input[type=password], textarea {
 	font-family: sans-serif;
 }
 
-input[type=text]:focus, input[type=password]:focus, textarea {
+input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }

@@ -61,9 +61,11 @@ namespace MentorMatch
 					string email = rdr[6].ToString();
 					string bio = rdr[7].ToString();
 					string personality = rdr[8].ToString();
+					string mentorID = rdr[9].ToString();
+					string skill = rdr[10].ToString();
 
 
-					string[] employeeInfo = {username, fName, lName, jobTitle, email, bio, personality};
+					string[] employeeInfo = {username, fName, lName, jobTitle, email, bio, personality, skill, mentorID};
 
 					return employeeInfo;
 				}
@@ -81,6 +83,62 @@ namespace MentorMatch
 			catch (Exception e)
 			{
 				string[] error = {"Error: " + e.Message};
+				return error;
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
+
+		/////////////////////////////////////////////////////////////////////////
+		[WebMethod(EnableSession = true)]
+		/////////////////////////////////////////////////////////////////////////
+		public string[] MentorInfo(string mentorId)
+		{
+			MySqlConnection con = new MySqlConnection(getConString());
+			try
+			{
+				string Query = $"select * from employees where employeeId='{mentorId}';";
+
+				con.Open();
+
+				MySqlCommand cmd = new MySqlCommand(Query, con);
+				MySqlDataReader rdr = cmd.ExecuteReader();
+
+				if (rdr.Read())
+				{
+					///// Ignore for now. /////
+					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
+
+					string username = rdr[1].ToString();
+					string fName = rdr[3].ToString();
+					string lName = rdr[4].ToString();
+					string jobTitle = rdr[5].ToString();
+					string email = rdr[6].ToString();
+					string bio = rdr[7].ToString();
+					string personality = rdr[8].ToString();
+					string skill = rdr[10].ToString();
+
+
+					string[] mentorInfo = { username, fName, lName, jobTitle, email, bio, personality, skill };
+
+					return mentorInfo;
+				}
+
+				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////
+				/*MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+				DataTable table = new DataTable();
+				adapter.Fill(table);*/
+				else
+				{
+					string[] incorrect = { "incorrect" };
+					return incorrect;
+				}
+			}
+			catch (Exception e)
+			{
+				string[] error = { "Error: " + e.Message };
 				return error;
 			}
 			finally
@@ -123,14 +181,14 @@ namespace MentorMatch
 		[WebMethod(EnableSession = true)]
 		/////////////////////////////////////////////////////////////////////////
 		public string EditAccountInfo(string employeeUsername, string employeePassword, string employeeFirstName, string employeeLastName,
-										string employeeJobTitle, string employeeEmail, string employeeBio, string employeePersonalityType)
+										string employeeJobTitle, string employeeEmail, string employeeBio, string employeePersonalityType, string skill)
 		{
 
 			MySqlConnection con = new MySqlConnection(getConString());
 			try
 			{
 				string Query = $"UPDATE employees " +
-							   $"SET employeePassword='{employeePassword}', employeeFirstName='{employeeFirstName}', employeeLastName='{employeeLastName}', employeeJobTitle='{employeeJobTitle}', employeeEmail='{employeeEmail}', employeeBio='{employeeBio}', employeePersonalityType='{employeePersonalityType}' " +
+							   $"SET employeePassword='{employeePassword}', employeeFirstName='{employeeFirstName}', employeeLastName='{employeeLastName}', employeeJobTitle='{employeeJobTitle}', employeeEmail='{employeeEmail}', employeeBio='{employeeBio}', employeePersonalityType='{employeePersonalityType}', skill='{skill}' " +
 							   $"WHERE employeeUsername='{employeeUsername}';";
 
 				MySqlCommand cmd = new MySqlCommand(Query, con);

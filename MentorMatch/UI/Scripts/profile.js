@@ -9,6 +9,8 @@ let jobTitle = sessionStorage.getItem("jobTitle");
 let email = sessionStorage.getItem("email");
 let bio = sessionStorage.getItem("bio");
 let personality = sessionStorage.getItem("personality");
+let skill = sessionStorage.getItem("skill");
+let mentorID = sessionStorage.getItem("mentorID");
  
 switch (personality) {
     case "INTJ": 
@@ -71,7 +73,49 @@ function ProfileHandler() {
     document.getElementById("profilePersonality").innerHTML = personality;
     document.getElementById("myEmail").href = `mailto:${email}`;
     document.getElementById("profileBio").innerHTML = bio;
+    document.getElementById("profileSkills").innerHTML = skill;
+
+    if (mentorID == '') {
+        document.getElementById("myMentor").style.display = "none";
+    }
 }
+
+// Information gathered for mentor
+function GetMentorInfo() {
+
+    var webMethod = "../../ProjectServices.asmx/MentorInfo";
+    var parameters = "{mentorId: " +JSON.stringify(mentorID) +"}";
+
+    //jQuery ajax method
+    $.ajax({
+        type: "POST",
+        url: webMethod,
+        data: parameters,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (msg) {
+            var responseFromServer = msg.d;
+            if (responseFromServer[0] == "incorrect") {
+                alert("No Mentor Found.");
+            } else {
+                sessionStorage.setItem("mentorUsername", responseFromServer[0]);
+                sessionStorage.setItem("mentorFname", responseFromServer[1]);
+                sessionStorage.setItem("mentorLname", responseFromServer[2]);
+                sessionStorage.setItem("mentorJobTitle", responseFromServer[3]);
+                sessionStorage.setItem("mentorEmail", responseFromServer[4]);
+                sessionStorage.setItem("mentorBio", responseFromServer[5]);
+                sessionStorage.setItem("mentorPersonality", responseFromServer[6]);
+                sessionStorage.setItem("mentorSkill", responseFromServer[7]);
+                window.location.replace("mentor.html");
+            }
+        },
+        error: function (e) {
+            alert("Error: Unable to access the webservice.");
+        }
+    });
+}
+
+
 // Open Profile Info Modal
 function EditInfo() {
     document.getElementById("infoModal").style.display = "block";
@@ -101,6 +145,7 @@ function EditInfoHandler() {
     var newjobTitle = $("#jobTitle").val();
     var newpersonalityType = $("#personalityType").val();
     var newbio = $("#newBio").val();
+    var newSkills = $("#newSkills").val();
 
 
     if (newpassword == "" || newpsw_repeat == "" || newfname == "" || newlname == "" || newemail == "") {
@@ -118,8 +163,8 @@ function EditInfoHandler() {
                     ", employeeJobTitle: " +JSON.stringify(newjobTitle) +
                     ", employeeEmail: " +JSON.stringify(newemail) + 
                     ", employeeBio: " +JSON.stringify(newbio) + 
-                    ", employeePersonalityType: " +JSON.stringify(newpersonalityType)+"}";
-
+                    ", employeePersonalityType: " +JSON.stringify(newpersonalityType) +
+                    ", skill: " +JSON.stringify(newSkills) +"}";
 
         //jQuery ajax method
         $.ajax({
@@ -131,10 +176,9 @@ function EditInfoHandler() {
             success: function (msg) {
                 var responseFromServer = msg.d;
                 if (responseFromServer == "Profile Info Updated!") {
-                    alert(responseFromServer);
-                    ClearForm();
+                    alert(responseFromServer) //+ "\nNew information will be displayed next time you log in.");
                     CloseInfoModal();
-                    window.location.replace("profile.html");
+                    window.location.reload(true);
                 } else {
                     alert(responseFromServer);
                 }
