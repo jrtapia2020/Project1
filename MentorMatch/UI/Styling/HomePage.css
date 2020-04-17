@@ -16,11 +16,10 @@ form {
     border: 3px solid black;
 }
 
-/* Hover effect for linkss */
-a:hover {
-    background-color: orange;
-    color: white;
-    opacity: .9;
+/* Hover effect for links */
+a:hover{
+	border: 2px solid orange;
+	cursor: pointer;
 }
 
 /* Friends Link*/

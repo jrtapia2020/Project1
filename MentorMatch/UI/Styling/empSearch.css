@@ -44,6 +44,11 @@ nav a{
 	border-radius: 4px;
 }
 
+nav a:hover{
+	border: 2px solid orange;
+	cursor: pointer;
+}
+
 #empList {
 	width: 90%;
 	margin: 15px auto;

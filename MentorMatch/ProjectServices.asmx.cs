@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data;
+using System.Web;
+using System.Web.Http;
 using System.Web.Services;
 using MySql.Data.MySqlClient;
 
@@ -116,5 +118,57 @@ namespace MentorMatch
 				con.Close();
 			}
 		}
+
+		/////////////////////////////////////////////////////////////////////////
+		[WebMethod(EnableSession = true)]
+		/////////////////////////////////////////////////////////////////////////
+		public string EditAccountInfo(string employeeUsername, string employeePassword, string employeeFirstName, string employeeLastName,
+										string employeeJobTitle, string employeeEmail, string employeeBio, string employeePersonalityType)
+		{
+
+			MySqlConnection con = new MySqlConnection(getConString());
+			try
+			{
+				string Query = $"UPDATE employees " +
+							   $"SET employeePassword='{employeePassword}', employeeFirstName='{employeeFirstName}', employeeLastName='{employeeLastName}', employeeJobTitle='{employeeJobTitle}', employeeEmail='{employeeEmail}', employeeBio='{employeeBio}', employeePersonalityType='{employeePersonalityType}' " +
+							   $"WHERE employeeUsername='{employeeUsername}';";
+
+				MySqlCommand cmd = new MySqlCommand(Query, con);
+
+				con.Open();
+				int result = cmd.ExecuteNonQuery();
+
+				return "Profile Info Updated!";
+			}
+			catch (Exception e)
+			{
+				return "Error: " + e.Message;
+			}
+			finally
+			{
+				con.Close();
+			}
 		}
+		/*
+		/////////////////////////////////////////////////////////////////////////
+		[WebMethod(EnableSession = true)]
+		/////////////////////////////////////////////////////////////////////////
+		[HttpPost]
+		public JsonResult Upload()
+		{
+			for (int i = 0; i < Request.Files.Count; i++)
+			{
+				HttpPostedFileBase file = Request.Files[i]; //Uploaded file
+															//Use the following properties to get file's name, size and MIMEType
+				int fileSize = file.ContentLength;
+				string fileName = file.FileName;
+				string mimeType = file.ContentType;
+				System.IO.Stream fileContent = file.InputStream;
+				//To save file, use SaveAs method
+				file.SaveAs(Server.MapPath("./UI/Images/") + fileName); //File will be saved in application root
+			}
+			return Json("Uploaded " + Request.Files.Count + " files");
+		}
+		*/
+	}
 }

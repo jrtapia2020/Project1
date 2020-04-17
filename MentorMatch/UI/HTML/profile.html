@@ -16,6 +16,7 @@
 	<link rel="icon" href="../Images/logo.png">
 </head>
 
+<!--<body onload="ProfileHandler()">-->
 <body onload="ProfileHandler()">
 	<div class="topbar">
 		<div class="logoimg">
@@ -39,7 +40,7 @@
 	<div class="profilemeat">
 		<div class="profilehead">
 			<div class="profileimg">
-				<img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:300px;">
+				<img src="../Images/profilePic.png" alt="profilePic" id="profilePic" style="height:250px;width:250px;">
 			</div>
 		</div>
 
@@ -48,22 +49,105 @@
 				<h1 id="profileName">John Doe</h1>
 			</div>
 				
-			<ui>
-				<li><b>Job Title:</b> <span id="profileJobTitle">Title</span></li>
-				<li><b>Personality Type:</b> <span id="profilePersonality">Personality</span></li>
-			</ui>
+			<ul style="list-style-type:none;">
+				<li><b>Job Title:</b> <span id="profileJobTitle" style="color: black;">Title</span></li>
+				<li><b>Personality Type:</b> <span id="profilePersonality" style="color: black;">Personality</span></li>
+			</ul>
 
 			<div class="profileBtns">
-				<a href="mailto:admin@gmail.com" id="email">Send Email</a>
+				<a href="mailto:admin@gmail.com" id="myEmail">Send Email</a>
 				<a href="mentor_page.html" id="myMentor">My Mentor</a>
-				<a href="#" id="addFriend">Edit Bio</a>
-				<a href="#" id="removeFriend">Edit Profile Picture</a>
+				<a onclick="javascript:EditInfo()" id="infoModalBtn">Edit Info</a>
+				<a onclick="javascript:EditPicture()" id="pictureModalBtn">Edit Profile Picture</a>
+			</div>
+		</div>
+
+		<div id="infoModal" class="modal">
+			<div class="modal-content">
+			  <span id="infoClose" class="close" onclick="CloseInfoModal()">&times;</span>
+			  <form>
+				<div class="container">	
+					<h2>Please Fill Out This Form to Edit Profile Information.</h2>
+					<h3><i>(<span>*</span>) = required</i></h3>
+					<hr>
+	
+					<label for="fname"><b>New First Name</b><span>*</span></label>
+					<input type="text" placeholder="Enter First Name" name="fname" id="fname" required>
+	
+					<label for="lname"><b>New Last Name</b><span>*</span></label>
+					<input type="text" placeholder="Enter Last Name" name="lname" id="lname" required>
+	
+					<label for="email"><b>New Email</b><span>*</span></label>
+					<input type="text" placeholder="Enter Email Address" name="email" id="email" required>
+	
+					<label for="jobTitle"><b>New Job Title</b><span>*</span></label>
+					<input type="text" placeholder="Enter Job Title" name="jobTitle" id="jobTitle" required>
+	
+					<br>
+					<label for="personalityType"><b>New Personality Type</b><span>*</span></label>
+					<br>
+					<select id="personalityType" required>
+						<option selected="true" disabled="disabled">Select Personality</option>
+						<option value="INTJ">Architect</option>
+						<option value="INTP">Logician</option>
+						<option value="ENTJ">Commander</option>
+						<option value="ENTP">Debater</option>
+						<option value="INFJ">Advocate</option>
+						<option value="INFP">Mediator</option>
+						<option value="ENFJ">Protagonist</option>
+						<option value="ENFP">Campaigner</option>
+						<option value="ISTJ">Logistician</option>
+						<option value="ISFJ">Defender</option>
+						<option value="ESTJ">Executive</option>
+						<option value="ESFJ">Consul</option>
+						<option value="ISTP">Virtuoso</option>
+						<option value="ISFP">Adventurer</option>
+						<option value="ESTP">Entrepreneur</option>
+						<option value="ESFP">Entertainer</option>
+					</select>
+					
+					<a id="personalityTest" href='https://www.16personalities.com/free-personality-test' target="_blank">Click HERE to take your personality test!</a>
+				
+					<label for="newBio"><b>New Bio (About Me)</b><span>*</span></label><br>
+					<textarea maxlength="150" placeholder="Tell us about yourself!" name="newBio" id="newBio" required></textarea>
+
+					<hr>
+	
+					<label for="psw"><b>New Password</b><span>*</span></label>
+					<input type="password" placeholder="Enter Password" name="psw" id="password" required>
+	
+					<label for="psw-repeat"><b>Repeat New Password</b><span>*</span></label>
+					<input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+					<hr>
+
+					<button type="button" onclick="javascript:EditInfoHandler()" class="registerbtn">Edit Profile Info!</button>
+					<button type="button" onclick="javascript:CloseInfoModal()" class="cancel">Cancel</button>
+				</div>
+			</form>
+			</div>
+		</div>
+
+		<div id="pictureModal" class="modal">
+			<div class="modal-content">
+			  <span id="pictureClose" class="close" onclick="ClosePictureModal()">&times;</span>
+			  <form id="uploader">
+				<div class="container">
+					<label for="newProfilePic"><b>Please Select a New Profile Picture:</b></label> <br>
+					<input type="file" id="newProfilePic" name="newProfilePic" accept=".jpg" onchange="loadFile(event)" required> 
+					<input type="submit" id="newPicSubmit">
+					<button type="button" onclick="javascript:ClosePictureModal()" class="cancel" style="width: 15%;">Cancel</button>
+					<br><i>Note: File must be named after your user name and end in .jpg (ex. jsmith.jpg)</i><hr>
+					<i><u>Preview of last file selected:</u></i><br><br>
+					<img id="preview" src="#" alt="preview" style="height:250px;width:250px;">
+				</div>
+			  </form>
 			</div>
 		</div>
 
 		<div class="bio">
-			<h2><u>Biography</u></h2>
-			<p id="profileBio">Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.  
+			<h2><u>About Me:</u></h2>
+			<p id="profileBio" style="color: black;">Hello!  I am a Jr. Developer and I just got my degree from ASU in the W.P. Carey School of Business.  
 				I am excited to connect with mentors to help me improve my coding skills.
 		</div> 
 	</div>

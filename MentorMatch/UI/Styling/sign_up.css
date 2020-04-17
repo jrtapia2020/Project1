@@ -91,9 +91,8 @@ select {
 }
 
 .registerbtn:hover {
-    background-color: dodgerblue;
-    color: white;
-    opacity: .9;
+    border: 2px solid orange;
+    cursor: pointer;
 }
 
 /* Cancel button */
