@@ -36,6 +36,7 @@ nav {
 
 }
 
+/* Text inside the buttons on the Topbar */
 nav a{
 	color: white;
 	background-image: linear-gradient(to right, #D4145A, #FBB03B);
@@ -57,7 +58,7 @@ hr {
 	width: 95%;
 }
 
-/* div around "My Groups" */
+/* div around "Python Partners" */
 div.groupsmeat{
 	width: 90%;
 	background-color: honeydew;
@@ -67,48 +68,9 @@ div.groupsmeat{
 	text-shadow: 2px 2px 8px gray;
 }
 
+/* Text inside the groupsmeat div */
 div.groupshead{
 	font-size: x-large;
 	text-align: center;
-}
-
-div.group1{
-	float: right;
-    padding: 20px;
-    margin: 15px;
-    background-color: honeydew;
-    border-radius: 4px;
-	border: 3px solid black;
-	width: 95%;
-}
-
-div.group2{
-	float: right;
-    padding: 20px;
-    margin: 15px;
-    background-color: honeydew;
-    border-radius: 4px;
-	border: 3px solid black;
-	width: 95%;
-}
-
-div.group3{
-	float: right;
-    padding: 20px;
-    margin: 15px;
-    background-color: honeydew;
-    border-radius: 4px;
-	border: 3px solid black;
-	width: 95%;
-}
-
-div.group4{
-	float: right;
-    padding: 20px;
-    margin: 15px;
-    background-color: honeydew;
-    border-radius: 4px;
-	border: 3px solid black;
-	width: 95%;
 }
 
