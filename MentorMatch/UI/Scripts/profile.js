@@ -67,16 +67,18 @@ switch (personality) {
 
 // Profile page has its information changed by the information pulled from the DB
 function ProfileHandler() {
-    document.getElementById("profilePic").src = profilePic;
-    document.getElementById("profileName").innerHTML = `${fName} ${lName}`;
-    document.getElementById("profileJobTitle").innerHTML = jobTitle;
-    document.getElementById("profilePersonality").innerHTML = personality;
-    document.getElementById("myEmail").href = `mailto:${email}`;
-    document.getElementById("profileBio").innerHTML = bio;
-    document.getElementById("profileSkills").innerHTML = skill;
+    if (username !== null) {
+        document.getElementById("profilePic").src = profilePic;
+        document.getElementById("profileName").innerHTML = `${fName} ${lName}`;
+        document.getElementById("profileJobTitle").innerHTML = jobTitle;
+        document.getElementById("profilePersonality").innerHTML = personality;
+        document.getElementById("myEmail").href = `mailto:${email}`;
+        document.getElementById("profileBio").innerHTML = bio;
+        document.getElementById("profileSkills").innerHTML = skill;
 
-    if (mentorID == '') {
-        document.getElementById("myMentor").style.display = "none";
+        if (mentorID == '') {
+            document.getElementById("myMentor").style.display = "none";
+        }
     }
 }
 

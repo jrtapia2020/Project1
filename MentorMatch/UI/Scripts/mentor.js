@@ -65,11 +65,13 @@ switch (mentorPersonality) {
 
 // Profile page has its information changed by the information pulled from the DB
 function MentorHandler() {
-    document.getElementById("profilePic").src = profilePic;
-    document.getElementById("profileName").innerHTML = `${mentorFname} ${mentorLname}`;
-    document.getElementById("profileJobTitle").innerHTML = mentorJobTitle;
-    document.getElementById("profilePersonality").innerHTML = mentorPersonality;
-    document.getElementById("myEmail").href = `mailto:${mentorEmail}`;
-    document.getElementById("profileBio").innerHTML = mentorBio;
-    document.getElementById("profileSkills").innerHTML = mentorSkill;
+    if (username !== null) {
+        document.getElementById("profilePic").src = profilePic;
+        document.getElementById("profileName").innerHTML = `${mentorFname} ${mentorLname}`;
+        document.getElementById("profileJobTitle").innerHTML = mentorJobTitle;
+        document.getElementById("profilePersonality").innerHTML = mentorPersonality;
+        document.getElementById("myEmail").href = `mailto:${mentorEmail}`;
+        document.getElementById("profileBio").innerHTML = mentorBio;
+        document.getElementById("profileSkills").innerHTML = mentorSkill;
+    }
 }

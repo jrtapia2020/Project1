@@ -13,7 +13,6 @@
     width: 90%;
     margin: auto;
     color: crimson;
-    text-shadow: 2px 2px 8px gray;
     padding: 25px;
 }
 
@@ -26,7 +25,7 @@
     float: left;
     padding: 35px;
     margin: 35px;
-    background-color: honeydew;
+    background-color: white;
     border-radius: 4px;
     border: 3px solid black;
 }
@@ -35,7 +34,7 @@
     float: left;
     padding: 35px;
     margin: 35px;
-    background-color: honeydew;
+    background-color: white;
     border-radius: 4px;
     border: 3px solid black;
 }
@@ -44,7 +43,7 @@
     float: left;
     padding: 35px;
     margin: 35px;
-    background-color: honeydew;
+    background-color: white;
     border-radius: 4px;
     border: 3px solid black;
 }
@@ -60,7 +59,8 @@ div.topbar{
 	height: 70px;
 	border: 2px solid black;
 	margin: 15px auto;
-	background-color: honeydew;
+    background-color: honeydew;
+    padding-bottom: 5px;
 	color: crimson;
 	text-shadow: 2px 2px 8px gray;
 }
@@ -69,6 +69,7 @@ div.topbar{
 div.logoimg {
     float: left;
     margin-right: 10px;
+    margin-top: 3px;
 }
 
 /* Display text next to logo */
@@ -98,4 +99,34 @@ nav a{
 nav a:hover{
 	border: 2px solid orange;
 	cursor: pointer;
+}
+
+footer {
+	width:	90%;
+	margin: 15px auto;
+	background-color: honeydew;
+	border: 3px solid black;
+	overflow: auto;
+}
+
+footer div {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+footer div a img {
+    margin: 10px;
+    margin-bottom: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+footer div a img:hover {
+    margin: 10px;
+    margin-bottom: 5px;
+	border: 3px solid orange;
+	border-radius: 10px; 
 }

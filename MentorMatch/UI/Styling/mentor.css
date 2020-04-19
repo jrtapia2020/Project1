@@ -11,6 +11,7 @@ div.topbar {
     height: 70px;
     border: 2px solid black;
     margin: 15px auto;
+    padding-bottom: 5px;
     background-color: honeydew;
     color: crimson;
     text-shadow: 2px 2px 8px gray;
@@ -20,6 +21,7 @@ div.topbar {
 div.logoimg {
     float: left;
     margin-right: 10px;
+    margin-top: 3px;
 }
 
 /* Display text next to logo */
@@ -31,7 +33,7 @@ div.pagetop {
 nav {
     display: inline-block;
     float: right;
-    color: black;
+    color: white;
     margin-top: 30px;
 }
 
@@ -45,7 +47,7 @@ nav a {
     border-radius: 4px;
 }
 
-nav a:hover{
+nav a:hover {
 	border: 2px solid orange;
 	cursor: pointer;
 }
@@ -54,7 +56,7 @@ nav a:hover{
     cursor: pointer;
 }
 
-div.profilemeat{
+div.profilemeat {
 	width: 97.5%;
 	margin: 15px auto;
 	padding: 15px;
@@ -63,7 +65,7 @@ div.profilemeat{
 	color: white;
 }
 
-div.profileimg{
+div.profileimg {
 	margin-top: 12px;
 	margin-left: 20px;
 	float: left;
@@ -74,12 +76,12 @@ div.profileimg img {
 	border-radius: 14px;
 }
 
-div.name{
+div.name {
 	display: inline-block;
 	font-size: x-large;
 }
 
-div.geninfo{
+div.geninfo {
 	display: inline-block;
 	margin-top: 13px;
 	margin-left: 15px;
@@ -124,4 +126,34 @@ div.bio {
 	background-color: white;
 	font-size: large;
 	border-radius: 14px;
+}
+
+footer {
+	width:	100%;
+	margin: 15px auto;
+	background-color: honeydew;
+	border: 3px solid black;
+	overflow: auto;
+}
+
+footer div {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+footer div a img {
+    margin: 10px;
+    margin-bottom: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+footer div a img:hover {
+    margin: 10px;
+    margin-bottom: 5px;
+	border: 3px solid orange;
+	border-radius: 10px; 
 }

@@ -6,7 +6,7 @@ body{
 
 /* Sizing login form */
 div.home{
-    width: 69%;
+    width: 70%;
     margin: 15px auto;
     background-color: white;
 }
@@ -17,7 +17,7 @@ form {
 }
 
 /* Hover effect for links */
-a:hover{
+a.Btns:hover{
 	border: 2px solid orange;
 	cursor: pointer;
 }
@@ -140,4 +140,30 @@ img.logo {
 .container a {
     padding: 15px;
     border-radius: 4px;
+}
+
+footer {
+	width:	69.7%;
+	margin: 15px auto;
+	background-color: honeydew;
+	border: 3px solid black;
+	overflow: auto;
+}
+
+footer div {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+footer div a img {
+	margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px; 
+}
+
+footer div a img:hover {
+	margin: 10px;
+	border: 3px solid orange;
+	border-radius: 10px; 
 }
