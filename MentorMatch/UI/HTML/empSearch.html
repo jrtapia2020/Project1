@@ -6,14 +6,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <!--Scripts-->
-    <script src="empSearch.js"></script>
+    <script src="../Scripts/empSearch.js"></script>
 
     <!--CSS Link-->
     <link rel="stylesheet" type="text/css" href="../Styling/empSearch.css">
     <link rel="icon" href="../Images/logo.png">
 </head>
 
-<body>
+<!--<body onload="initialize()">-->
+<body onload="initialize()">
     <div class="topbar">
       <div class="logoimg">
         <img src="../Images/logo.png" alt="Logo" class="logo" style="height:70px;width:70px;">
@@ -40,25 +41,20 @@
 
         <hr>
       </div>
-        <div class="list">
-          <table id="names" onload="listProfile()">
-            <tr>
-              <td>
-                <img src="../Images/mscott.jpg" alt="Profile Picture" class="picture"> <a href="../html/profile.html"><b>Michael Scott</b></a> - Regional Manger</tr>
-              </td>
-             
-            <tr>
-              <td>
-                <img src="../Images/dschrute.jpg" alt="Profile Picture" class="picture">  <a href="../html/profile.html"><b>Dwight Schrute</b></a> - Assistant to the Regional Manager</tr>
-              </td>
-           <tr>
-              <td>
-                <img src="../Images/kmalone.jpg" alt="Profile Picture" class="picture">  <a href="../html/profile.html"><b>Kevin Malone</b></a> - Accountant</tr>
-              </td>
-            <tr>
-                <td>
-                  <img src="../Images/jhalpert.jpg" alt="Profile Picture" class="picture"> <a href="../html/profile.html"><b>Jim Halpert</b></a> - Director of Sales</tr>
-                </td>
+        <div id="searchBar">
+          <input id="searchText" type="text" placeholder="Search By Username Here to Find Employee">
+          <button id="searchBtn"onclick="SearchEmployee()">Search</button>
+          <button id="clearBtn" onclick="ClearSearch()">Clear</button>
+        </div>
+
+        <div id="empTableDiv">
+          <table id="empTable" onload="">
+            <th>
+              <td class="tableHeading">Name:</td>
+              <td class="tableHeading">Job Title:</td>
+              <td class="tableHeading">Skills:</td>
+              <td class="tableHeading">Email:</td>
+            </th>
           </table>
         </div>
     </div>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.Http;
@@ -108,8 +109,6 @@ namespace MentorMatch
 
 				if (rdr.Read())
 				{
-					///// Ignore for now. /////
-					Console.WriteLine(rdr[1] + " -- " + rdr[2]);
 
 					string username = rdr[1].ToString();
 					string fName = rdr[3].ToString();
@@ -126,10 +125,6 @@ namespace MentorMatch
 					return mentorInfo;
 				}
 
-				//// Ignore below until I can ask Nichols what this does. --Jesus Tapia-Martinez ////
-				/*MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-				DataTable table = new DataTable();
-				adapter.Fill(table);*/
 				else
 				{
 					string[] incorrect = { "incorrect" };
@@ -139,6 +134,56 @@ namespace MentorMatch
 			catch (Exception e)
 			{
 				string[] error = { "Error: " + e.Message };
+				return error;
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
+
+		/////////////////////////////////////////////////////////////////////////
+		[WebMethod(EnableSession = true)]
+		/////////////////////////////////////////////////////////////////////////
+		public List<string[]> LoadEmployees()
+		{
+			MySqlConnection con = new MySqlConnection(getConString());
+			try
+			{
+				string Query = $"SELECT employeeFirstName, employeeLastName, employeeJobTitle, skill, employeeUsername, employeeEmail FROM employees WHERE employeeUsername!='admin';";
+
+				con.Open();
+
+				MySqlCommand cmd = new MySqlCommand(Query, con);
+				MySqlDataReader rdr = cmd.ExecuteReader();
+
+				
+				List<string[]> employees = new List<string[]>();
+				while (rdr.Read())
+				{
+
+					string fName = rdr[0].ToString();
+					string lName = rdr[1].ToString();
+					string jobTitle = rdr[2].ToString();
+					string skill = rdr[3].ToString();
+					string username = rdr[4].ToString();
+					string email = rdr[5].ToString();
+
+
+					string[] employeeInfo = {fName, lName, jobTitle, skill, username, email };
+
+					employees.Add(employeeInfo);
+				}
+				return employees;
+				
+
+				
+			}
+			catch (Exception e)
+			{
+				List<string[]> error = new List<string[]>();
+				error.Add(new string[] { "error" });
+				error.Add(new string[] { "Error: " + e.Message });
 				return error;
 			}
 			finally
@@ -207,26 +252,6 @@ namespace MentorMatch
 				con.Close();
 			}
 		}
-		/*
-		/////////////////////////////////////////////////////////////////////////
-		[WebMethod(EnableSession = true)]
-		/////////////////////////////////////////////////////////////////////////
-		[HttpPost]
-		public JsonResult Upload()
-		{
-			for (int i = 0; i < Request.Files.Count; i++)
-			{
-				HttpPostedFileBase file = Request.Files[i]; //Uploaded file
-															//Use the following properties to get file's name, size and MIMEType
-				int fileSize = file.ContentLength;
-				string fileName = file.FileName;
-				string mimeType = file.ContentType;
-				System.IO.Stream fileContent = file.InputStream;
-				//To save file, use SaveAs method
-				file.SaveAs(Server.MapPath("./UI/Images/") + fileName); //File will be saved in application root
-			}
-			return Json("Uploaded " + Request.Files.Count + " files");
-		}
-		*/
+
 	}
 }

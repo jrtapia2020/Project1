@@ -1,8 +1,11 @@
 ﻿"use strict";
 // Load Profile information
 let username = sessionStorage.getItem("username");
-let profilePic = `../Images/${username}.jpg`;
-//let profilePic = '../Images/profilePic.png';  || Needs to be worked on to allow for a default picture when user does not have one
+let usernames = sessionStorage.getItem("usernames");
+let profilePic = "../Images/profilePic.jpg";
+if (usernames.includes(username)) {
+    profilePic = `../Images/${username}.jpg`;
+}
 let fName = sessionStorage.getItem("fName");
 let lName = sessionStorage.getItem("lName");
 let jobTitle = sessionStorage.getItem("jobTitle");
@@ -125,6 +128,15 @@ function EditInfo() {
 
 function CloseInfoModal() {
     document.getElementById("infoModal").style.display = "none";
+    $("#password").val("");
+    $("#psw-repeat").val("");
+    $("#fname").val("");
+    $("#lname").val("");
+    $("#email").val("");
+    $("#jobTitle").val("");
+    $("#personalityType").val("");
+    $("#newBio").val("");
+    $("#newSkills").val("");
 }
 
 // Open Profile Picture Modal
@@ -134,6 +146,8 @@ function EditPicture() {
 
 function ClosePictureModal() {
     document.getElementById("pictureModal").style.display = "none";
+    document.getElementById('newProfilePic').value = null;
+    document.getElementById('preview').style.display = "none";
 }
 
 // Edit Information AJAX Call
@@ -178,7 +192,7 @@ function EditInfoHandler() {
             success: function (msg) {
                 var responseFromServer = msg.d;
                 if (responseFromServer == "Profile Info Updated!") {
-                    alert(responseFromServer) //+ "\nNew information will be displayed next time you log in.");
+                    alert(responseFromServer+ "\nNew information will be displayed next time you log in.");
                     CloseInfoModal();
                     window.location.reload(true);
                 } else {
@@ -209,16 +223,18 @@ $(document).ready(function(){
         var fileName = e.target.files[0].name;
         newPic = fileName;
         if (fileName.slice(-3) !== "jpg") {
-            alert(`File ${fileName} is not the correct file type of ".jpg".\nPlease use the correct file type.`)
-            document.getElementById('newProfilePic').value = null;
-            document.getElementById('preview').style.display = "none";
+            picUploadError(fileName)
         } else if (fileName.slice(0,-4) !== username) {
-            alert(`File ${fileName} is not using the correct naming format.\nPlease name the file after your username.`)
-            document.getElementById('newProfilePic').value = null;
-            document.getElementById('preview').style.display = "none";
+            picUploadError(fileName)
         }
     });
 });
+
+function picUploadError(fileName) {
+    alert(`File ${fileName} is not using the correct naming format.\nPlease name the file after your username.`)
+    document.getElementById('newProfilePic').value = null;
+    document.getElementById('preview').style.display = "none";
+}
 /*
 document.getElementById('uploader').onsubmit = function () {
     var formdata = new FormData(); //FormData object
