@@ -91,6 +91,10 @@ li {
     margin-top: 5px;
 }
 
+li a {
+    color: rgb(224, 131, 16);
+}
+
 div.topbar{
 	width: 90%;
 	height: 70px;

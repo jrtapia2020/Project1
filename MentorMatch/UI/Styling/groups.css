@@ -74,9 +74,12 @@ div.groupshead {
 
 div.body{
 	background-color: white;
+	border: 3px solid black;
+	border-radius: 4px;
 	margin: 15px auto; 
 	text-align: center;
 	width: 70%;
+	padding: 10px;
 }
 
 footer {
