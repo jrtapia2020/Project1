@@ -223,15 +223,13 @@ $(document).ready(function(){
         var fileName = e.target.files[0].name;
         newPic = fileName;
         if (fileName.slice(-3) !== "jpg") {
-            picUploadError(fileName)
+            alert(`File ${fileName} is not using the correct file type.\nPlease use the file ".jpg" file extension.`)
+            document.getElementById('newProfilePic').value = null;
+            document.getElementById('preview').style.display = "none";
         } else if (fileName.slice(0,-4) !== username) {
-            picUploadError(fileName)
+            alert(`File ${fileName} is not using the correct naming format.\nPlease name the file after your username.`)
+            document.getElementById('newProfilePic').value = null;
+            document.getElementById('preview').style.display = "none";
         }
     });
 });
-
-function picUploadError(fileName) {
-    alert(`File ${fileName} is not using the correct naming format.\nPlease name the file after your username.`)
-    document.getElementById('newProfilePic').value = null;
-    document.getElementById('preview').style.display = "none";
-}

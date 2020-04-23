@@ -65,7 +65,7 @@ switch (mentorPersonality) {
 
 // Profile page has its information changed by the information pulled from the DB
 function MentorHandler() {
-    if (username !== null) {
+    if (mentorUsername !== null) {
         document.getElementById("profilePic").src = profilePic;
         document.getElementById("profileName").innerHTML = `${mentorFname} ${mentorLname}`;
         document.getElementById("profileJobTitle").innerHTML = mentorJobTitle;
